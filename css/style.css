@@ -1,0 +1,72 @@
+@font-face {
+    font-family: ScheherazadeNew;
+    src: url(../fonts/Scheherazade_New/ScheherazadeNew-Regular.ttf);
+}
+@font-face {
+    font-family: IBMPlexSansArabic;
+    src: url(../fonts/IBM_Plex_Sans_Arabic/IBMPlexSansArabic-Regular.ttf);
+}
+@font-face {
+    font-family: Katibeh;
+    src: url(../fonts/Katibeh/Katibeh-Regular.ttf);
+}
+body {
+    direction: rtl;
+    font-family: Katibeh !important;
+    background-color: #F6F2FF;
+}
+
+
+/**********
+Navbar
+***********/
+nav.navbar {
+    background-color: #404E73;
+}
+nav.navbar .navbar-brand{
+    width: 33%;
+}
+nav.navbar .navbar-brand img {
+    width: 25%;
+}
+nav.navbar  ul li a.nav-link{
+    color: white;
+    font-size: 20px;
+    margin-left:10px;
+    font-weight: 500;
+}
+nav.navbar  ul li a.nav-link.active,nav.navbar  ul li a.nav-link:hover{
+    color: #F28888;
+}
+nav.navbar .NavButtons a{
+    width: 40px ;
+    height: 40px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    color: #F28888;
+    filter: drop-shadow(0px 1px 5px rgba(0, 0, 0, 0.1));
+    transition: 0.3s ease all;
+}
+nav.navbar .NavButtons a:hover,nav.navbar .NavButtons form button:hover{
+    transform: scale(1.1);
+}
+
+nav.navbar .NavButtons  button{
+    background-color: #F28888;
+    border-radius: 8px;
+
+    border: 1px solid #F28888;
+    color: white;
+    font-size: 20px;
+    width: 40px !important;
+    height: 40px;
+    padding: 0;
+    min-width: 40px;
+    
+}
+/**********
+End Navbar
+***********/
