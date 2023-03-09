@@ -18,17 +18,17 @@
 
 <body>
        <!--Navbar-->
-       <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container justify-content-between">
+       <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+        <div class="container d-flex justify-content-between">
           <a class="navbar-brand" href="index.html">
             <img  src="images/Logo.png" alt="Logo" >
           </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+           <button class="navbar-toggler float-end" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
             aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fa-solid fa-bars"></i>
           </button>
-          <div class="collapse navbar-collapse " id="navbarScroll">
-            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll justify-content-between align-items-center">
+          <div class="collapse navbar-collapse justify-content-center" id="navbarScroll">
+            <ul class="navbar-nav mx-auto my-2 my-lg-0 navbar-nav-scroll justify-content-between align-items-center">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="index.html">الرئيسية</a>
               </li>
@@ -40,20 +40,70 @@
               </li>
            
             </ul>
-            <div class="NavButtons d-flex align-items-center">
-            <a href="" class="me-2">
+            <div class="NavButtons d-flex align-items-center d-lg-none d-flex justify-content-center">
+              <a class="me-2 searchBtn">
+                <button class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+              </a>
+              <a class="me-2 contactUsBtn">
+                <i class="fa-solid fa-phone"></i>
+              </a>
+                <a href="" class="">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+               
+              </div>
+          </div>
+          <div class="NavButtons d-flex align-items-center d-lg-flex d-none justify-content-center align-items-center">
+            <a class="me-2 searchBtn">
+
               <button class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
             </a>
-
+            <a class="me-2 contactUsBtn">
+              <i class="fa-solid fa-phone"></i>
+            </a>
               <a href="" class="">
                 <i class="fa-solid fa-cart-shopping"></i>
               </a>
              
             </div>
-          </div>
+           
         </div>
       </nav>
       <!--End Navbar-->
+
+
+      <!--Banner Slider-->
+      <section class="Banner" id="Banner">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="overlay">  </div>
+              <img src="images/Restaurant.webp" class="d-block w-100" alt="Restaurant">
+          
+            </div>
+            <div class="carousel-item">
+              <div class="overlay"> </div>
+              <img src="images/Pharmacy.jpg" class="d-block w-100" alt="Pharmacy">
+                        </div>
+            <div class="carousel-item">
+              <div class="overlay"> </div>
+              <img src="images/Productive Family" class="d-block w-100" alt="Productive">
+                        </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </button>
+        </div>
+      </section>
+      <!--End Banner SLider-->
 </body>
 <script src="assets/js/jquery-3.6.1.min.js"></script>
 <script src="assets/js/bootstrap.js"></script>
