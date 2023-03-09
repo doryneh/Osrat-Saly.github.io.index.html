@@ -8,14 +8,10 @@
     src: url(../fonts/IBM_Plex_Sans_Arabic/IBMPlexSansArabic-Regular.ttf);
 }
 
-@font-face {
-    font-family: Katibeh;
-    src: url(../fonts/Katibeh/Katibeh-Regular.ttf);
-}
 
 body {
     direction: rtl;
-    font-family: Katibeh !important;
+    font-family: ScheherazadeNew !important;
     background-color: #F6F2FF;
 }
 
@@ -103,12 +99,15 @@ section.Banner .carousel-item{
     position: relative;
 }
 section.Banner .carousel-item .overlay{
-    background-color: rgba(0, 0, 0, 0.267);
+    background-color: rgba(0, 0, 0, 0.508);
     width: 100%;
     height: 100%;
     z-index: 2;
     position: absolute;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
 }
 section.Banner .carousel-item img{
     height: 100%;
@@ -116,6 +115,36 @@ section.Banner .carousel-item img{
 }
 section.Banner .carousel button,section.Banner .carousel .carousel-indicators{
     z-index: 100;
+}
+section.Banner .carousel-item h1.BannerTitle{
+    font-size: 50px;
+    color: white;
+    font-family: IBMPlexSansArabic !important;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+section.Banner .carousel-item h3.BannerText{
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+    width: 75%;
+    line-height: 40px;
+
+}
+section.Banner .carousel-item  .BannerButton{
+    background-color: #F28888;
+    border-radius: 8px;
+    color: white;
+    font-size: 22px;
+    margin-top: 20px;
+    border: none;
+    padding: 7px 25px;
+    font-weight: 600;
+    filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.15));
+    transition: 0.3 ease all;
+}
+section.Banner .carousel-item  .BannerButton:hover{
+    background-color: #b16363;
 }
 /**********
 End Banner
