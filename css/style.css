@@ -33,6 +33,7 @@ nav.navbar ul li a.nav-link {
     color: white;
     font-size: 22px;
     margin-left: 10px;
+    font-weight: 600;
 }
 
 nav.navbar ul li a.nav-link.active, nav.navbar ul li a.nav-link:hover {
