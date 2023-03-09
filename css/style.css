@@ -5,7 +5,7 @@
 
 @font-face {
     font-family: IBMPlexSansArabic;
-    src: url(../fonts/IBM_Plex_Sans_Arabic/IBMPlexSansArabic-Regular.ttf);
+    src: url(../fonts/Changa/Changa-VariableFont_wght.ttf);
 }
 
 
@@ -15,6 +15,13 @@ body {
     background-color: #F6F2FF;
 }
 
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+.fade-in {
+    animation: fadeIn 2s;
+}
 
 /**********
 Navbar
@@ -178,13 +185,16 @@ section.Banner button.carousel-control-next, section.Banner button.carousel-cont
     left: 0;
 
 }
-section.Banner button.carousel-control-next{
+
+section.Banner button.carousel-control-next {
     top: 45%;
 }
-section.Banner button.carousel-control-prev{
+
+section.Banner button.carousel-control-prev {
     top: 55%;
     right: unset;
 }
+
 section.Banner button.carousel-control-next span, section.Banner button.carousel-control-prev span {
     width: 50px;
     height: 50px;
@@ -197,6 +207,7 @@ section.Banner button.carousel-control-next span, section.Banner button.carousel
     align-items: center;
     transition: 0.3s ease all;
 }
+
 section.Banner button.carousel-control-next span:hover, section.Banner button.carousel-control-prev span:hover {
     background-color: rgb(255, 255, 255);
     transform: scale(1.1);
