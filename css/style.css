@@ -32,7 +32,7 @@ nav.navbar .navbar-brand img {
 nav.navbar ul li a.nav-link {
     color: white;
     font-size: 22px;
-    margin-left: 10px;
+    margin-left: 30px;
     font-weight: 600;
 }
 
@@ -40,11 +40,11 @@ nav.navbar ul li a.nav-link.active, nav.navbar ul li a.nav-link:hover {
     color: #F28888;
 }
 
-nav.navbar .NavButtons a,nav.navbar .NavButtons  a.searchBtn,nav.navbar .NavButtons  a.searchBtn button,nav.navbar button.navbar-toggler{
+nav.navbar .NavButtons a, nav.navbar .NavButtons a.searchBtn, nav.navbar .NavButtons a.searchBtn button, nav.navbar button.navbar-toggler {
     width: 40px;
     height: 40px;
     background-color: #404E73;
-   
+
     border-radius: 8px;
     color: white;
     filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.15));
@@ -52,18 +52,22 @@ nav.navbar .NavButtons a,nav.navbar .NavButtons  a.searchBtn,nav.navbar .NavButt
     padding: 0;
     min-width: 40px;
 }
-nav.navbar .NavButtons a,nav.navbar .NavButtons  a.searchBtn,nav.navbar .NavButtons  a.searchBtn button{
+
+nav.navbar .NavButtons a, nav.navbar .NavButtons a.searchBtn, nav.navbar .NavButtons a.searchBtn button {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-nav.navbar .NavButtons a:hover,nav.navbar .NavButtons  a.searchBtn:hover{
+
+nav.navbar .NavButtons a:hover, nav.navbar .NavButtons a.searchBtn:hover {
     transform: scale(1.1);
 }
-nav.navbar .NavButtons a.contactUsBtn{
+
+nav.navbar .NavButtons a.contactUsBtn {
     background-color: white;
     color: #F28888;
 }
+
 /* nav.navbar .NavButtons form input{
     background-color: white;
     border: none;
@@ -77,7 +81,7 @@ nav.navbar .NavButtons a.contactUsBtn{
     border: 1px solid #F28888;
 } */
 
-nav.navbar .NavButtons  a.searchBtn,nav.navbar .NavButtons  a.searchBtn button {
+nav.navbar .NavButtons a.searchBtn, nav.navbar .NavButtons a.searchBtn button {
     background-color: #F28888;
     border: 1px solid #F28888;
 }
@@ -93,13 +97,16 @@ Banner
 section.Banner {
     height: 100vh;
 }
-section.Banner .carousel-inner ,section.Banner .carousel-item{
+
+section.Banner .carousel-inner, section.Banner .carousel-item {
     height: 100vh;
 }
-section.Banner .carousel-item{
+
+section.Banner .carousel-item {
     position: relative;
 }
-section.Banner .carousel-item .overlay{
+
+section.Banner .carousel-item .overlay {
     background-color: rgba(0, 0, 0, 0.508);
     width: 100%;
     height: 100%;
@@ -110,21 +117,25 @@ section.Banner .carousel-item .overlay{
     justify-content: center;
     align-items: start;
 }
-section.Banner .carousel-item img{
+
+section.Banner .carousel-item img {
     height: 100%;
     z-index: 1;
 }
-section.Banner .carousel button,section.Banner .carousel .carousel-indicators{
+
+section.Banner .carousel button, section.Banner .carousel .carousel-indicators {
     z-index: 100;
 }
-section.Banner .carousel-item h1.BannerTitle{
+
+section.Banner .carousel-item h1.BannerTitle {
     font-size: 50px;
     color: white;
     font-family: IBMPlexSansArabic !important;
     font-weight: bold;
     margin-bottom: 20px;
 }
-section.Banner .carousel-item h3.BannerText{
+
+section.Banner .carousel-item h3.BannerText {
     font-size: 25px;
     color: white;
     font-weight: bold;
@@ -132,7 +143,8 @@ section.Banner .carousel-item h3.BannerText{
     line-height: 40px;
 
 }
-section.Banner .carousel-item  .BannerButton{
+
+section.Banner .carousel-item .BannerButton {
     background-color: #F28888;
     border-radius: 8px;
     color: white;
@@ -144,9 +156,52 @@ section.Banner .carousel-item  .BannerButton{
     filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.15));
     transition: 0.3 ease all;
 }
-section.Banner .carousel-item  .BannerButton:hover{
+
+section.Banner .carousel-item .BannerButton:hover {
     background-color: #b16363;
 }
+
+section.Banner .carousel .carousel-indicators button {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    opacity: 1 !important;
+}
+
+section.Banner .carousel .carousel-indicators button.active {
+    background-color: #404E73;
+}
+
+section.Banner button.carousel-control-next, section.Banner button.carousel-control-prev {
+    opacity: 1 !important;
+    height: fit-content;
+    left: 0;
+
+}
+section.Banner button.carousel-control-next{
+    top: 45%;
+}
+section.Banner button.carousel-control-prev{
+    top: 55%;
+    right: unset;
+}
+section.Banner button.carousel-control-next span, section.Banner button.carousel-control-prev span {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.712);
+    border-radius: 50%;
+    color: #404e73;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease all;
+}
+section.Banner button.carousel-control-next span:hover, section.Banner button.carousel-control-prev span:hover {
+    background-color: rgb(255, 255, 255);
+    transform: scale(1.1);
+}
+
 /**********
 End Banner
 ***********/
