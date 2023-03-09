@@ -135,9 +135,8 @@ section.Banner .carousel button, section.Banner .carousel .carousel-indicators {
 }
 
 section.Banner .carousel-item h1.BannerTitle {
-    font-size: 50px;
+    font-size: 75px;
     color: white;
-    font-family: IBMPlexSansArabic !important;
     font-weight: bold;
     margin-bottom: 20px;
 }
