@@ -615,7 +615,7 @@ section.category .categoryProduct .row {
     position: absolute;
     top: 1%;
     right: 1%;
-    background-color: #ee524f;
+    background-color: #f28888;
     color: white;
     border-radius: 20px;
     width: 70px;
@@ -1327,7 +1327,7 @@ Media
     .PinkSeperator .PinkSectionTitle {
         font-size: 15px;
         font-weight: bolder;
-        color: black;
+        color: #f28888;
     }
 
     .PinkSeperator .ShowAll a {
@@ -1414,7 +1414,9 @@ Media
         font-size: 13px;
         margin-bottom: 20px;
     }
-
+    .ProductCarouse .carousel .carousel-inner .carousel-item .card .newBtn, section.category .categoryProduct .card .newBtn{
+        font-size: 13px;
+    }
     .category .categoryProduct h3 button.btn.d-md-none.d-inline-block {
         font-size: 13px;
         padding: 0 10px;
@@ -1496,7 +1498,31 @@ Media
     .navbar>.container, .navbar>.container-fluid, .navbar>.container-sm, .navbar>.container-md, .navbar>.container-lg, .navbar>.container-xl, .navbar>.container-xxl {
         flex-wrap: nowrap !important;
     }
+    nav.navbar .NavParts .list-group .list-group-item{
+        margin-left: 15px;
+        padding: 0;
+    }
+    nav.navbar .navbar-brand img{
+        width: 90%;
+    }
+    nav.navbar .navbar-nav a.nav-link, nav.navbar .dropdown button, nav.navbar button.SideBar{
+        width: 40px;
+        height: 40px;
+        font-size: 15px;
+    }
+    nav.navbar .navbar-nav a.nav-link .badge {
+    font-size: 10px;
+    }
+    section.searchBar{
+        margin: 20px 0px;
+    }
+    section.searchBar .row input {
+        height: 50px;   
+    }
+    nav.navbar .NavParts .list-group .list-group-item a{
+        font-size: 14px;
 
+    }
     .hiddenSearch {
         transition: 1s ease all !important;
     }
