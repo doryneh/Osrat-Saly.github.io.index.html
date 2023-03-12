@@ -1,217 +1,1504 @@
-@font-face {
-    font-family: ScheherazadeNew;
-    src: url(../fonts/Scheherazade_New/ScheherazadeNew-Regular.ttf);
-}
+@import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
 
 @font-face {
-    font-family: IBMPlexSansArabic;
-    src: url(../fonts/Changa/Changa-VariableFont_wght.ttf);
+    font-family: Tajawal;
+    src: url(../fonts/Tajawal/Tajawal-Regular.ttf);
 }
 
-
-body {
+body, body.categoryBody {
     direction: rtl;
-    font-family: ScheherazadeNew !important;
-    background-color: #F6F2FF;
+    font-family: Tajawal !important;
+    background-color: #f1f1f1 !important;
 }
 
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
-.fade-in {
-    animation: fadeIn 2s;
+body.productBody {
+    background-color: #ffffff !important;
+
 }
 
-/**********
+
+
+/*********************
+*********************
 Navbar
-***********/
+*********************
+*********************/
 nav.navbar {
-    background-color: #404e7386;
+    position: relative;
+    background-color: #404e73 !important;
+ 
+    text-align: center;
+    direction: rtl;
 }
 
+nav.navbar .navbar-brand {
+    width: 100px;
+    margin-left: 20px;
 
+}
 
 nav.navbar .navbar-brand img {
-    width: 80px;
+    width: 100%;
 }
 
-nav.navbar ul li a.nav-link {
-    color: white;
-    font-size: 22px;
-    margin-left: 30px;
-    font-weight: 600;
+nav.navbar .offcanvas-start, .offcanvas-start#filter2, .offcanvas-start#filter1 {
+    width: 100% !important;
+    background-color: white !important;
 }
 
-nav.navbar ul li a.nav-link.active, nav.navbar ul li a.nav-link:hover {
-    color: #F28888;
+#offcanvasRightLabel {
+    text-align: right;
 }
 
-nav.navbar .NavButtons a, nav.navbar .NavButtons a.searchBtn, nav.navbar .NavButtons a.searchBtn button, nav.navbar button.navbar-toggler {
-    width: 40px;
-    height: 40px;
-    background-color: #404E73;
-
-    border-radius: 8px;
-    color: white;
-    filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.15));
-    transition: 0.3s ease all;
-    padding: 0;
-    min-width: 40px;
+#offcanvasRightLabel a img {
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
 }
-
-nav.navbar .NavButtons a, nav.navbar .NavButtons a.searchBtn, nav.navbar .NavButtons a.searchBtn button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-nav.navbar .NavButtons a:hover, nav.navbar .NavButtons a.searchBtn:hover {
-    transform: scale(1.1);
-}
-
-nav.navbar .NavButtons a.contactUsBtn {
-    background-color: white;
-    color: #F28888;
-}
-
-/* nav.navbar .NavButtons form input{
-    background-color: white;
+.OffcanvasButtons {
+    background-color: transparent;
     border: none;
-    border-radius: 5px;
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
-    color: #404E73;
-    font-size: 20px;
-    box-shadow: none;
-    height: 40px;
-    border: 1px solid #F28888;
-} */
-
-nav.navbar .NavButtons a.searchBtn, nav.navbar .NavButtons a.searchBtn button {
-    background-color: #F28888;
-    border: 1px solid #F28888;
-}
-
-/**********
-End Navbar
-***********/
-
-
-/**********
-Banner
-***********/
-section.Banner {
-    height: 100vh;
-}
-
-section.Banner .carousel-inner, section.Banner .carousel-item {
-    height: 100vh;
-}
-
-section.Banner .carousel-item {
-    position: relative;
-}
-
-section.Banner .carousel-item .overlay {
-    background-color: rgba(0, 0, 0, 0.508);
     width: 100%;
     height: 100%;
-    z-index: 2;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
+    text-align: start;
+    color: black !important;
+}
+nav.navbar .offcanvas-start .offcanvas-body {
+    padding: 0px 5px;
+    background-color: white !important;
+
 }
 
-section.Banner .carousel-item img {
-    height: 100%;
-    z-index: 1;
-}
-
-section.Banner .carousel button, section.Banner .carousel .carousel-indicators {
-    z-index: 100;
-}
-
-section.Banner .carousel-item h1.BannerTitle {
-    font-size: 75px;
-    color: white;
-    font-weight: bold;
+nav.navbar .offcanvas-start .offcanvas-body .list-group.One {
+    border-top: none;
+    border-bottom: 10px solid #f0f0f0;
     margin-bottom: 20px;
 }
 
-section.Banner .carousel-item h3.BannerText {
-    font-size: 25px;
-    color: white;
-    font-weight: bold;
-    width: 75%;
-    line-height: 40px;
-
+nav.navbar .offcanvas-start .offcanvas-body .list-group.Three {
+    border-bottom: none;
+    border-top: 10px solid #e2e2e2;
 }
 
-section.Banner .carousel-item .BannerButton {
-    background-color: #F28888;
-    border-radius: 8px;
-    color: white;
-    font-size: 22px;
-    margin-top: 20px;
-    border: none;
-    padding: 7px 25px;
-    font-weight: 600;
-    filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.15));
-    transition: 0.3 ease all;
+
+nav.navbar .offcanvas-start .offcanvas-body .list-group-item {
+    text-align: right;
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.068);
+    border-left: none;
+    border-right: none;
+    padding: 10px;
 }
 
-section.Banner .carousel-item .BannerButton:hover {
-    background-color: #b16363;
+nav.navbar .offcanvas-start .offcanvas-body .list-group-item a {
+    text-decoration: none;
+    color: black;
 }
 
-section.Banner .carousel .carousel-indicators button {
-    height: 15px;
-    width: 15px;
-    border-radius: 50%;
-    opacity: 1 !important;
+.nav-link, nav.navbar .dropdown button, section.productDetails .carousel .carousel-indicators button.like, section.productDetails .carousel .carousel-indicators button.share, button.btn.btn-default.btn-number {
+    display: flex !important;
+    align-content: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 !important;
 }
 
-section.Banner .carousel .carousel-indicators button.active {
-    background-color: #404E73;
+button.btn.btn-default.btn-number {
+    width: 25px !important;
+    border: 1px solid #ced4da;
 }
 
-section.Banner button.carousel-control-next, section.Banner button.carousel-control-prev {
-    opacity: 1 !important;
-    height: fit-content;
-    left: 0;
-
+section.productDetails .addToCart {
+    display: flex !important;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 8px !important;
 }
 
-section.Banner button.carousel-control-next {
-    top: 45%;
-}
-
-section.Banner button.carousel-control-prev {
-    top: 55%;
-    right: unset;
-}
-
-section.Banner button.carousel-control-next span, section.Banner button.carousel-control-prev span {
+nav.navbar .navbar-nav a.nav-link, nav.navbar .dropdown button, nav.navbar button.SideBar {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 25px;
+    color: white ;
+    margin-left: 30px;
+    background-color: #f28888;
+    border-radius: 10px;
     width: 50px;
     height: 50px;
-    background-color: rgba(255, 255, 255, 0.712);
-    border-radius: 50%;
+    border: none;
+    box-shadow: none !important;
+    transition: 0.2s ease all;
+}
+nav.navbar .dropdown button {
+    padding: 0;
+}
+
+nav.navbar .navbar-nav a.nav-link:hover {
+    background-color: white;
     color: #404e73;
-    font-size: 30px;
+    transform: scale(1.1);
+
+}
+
+nav.navbar .navbar-nav a.nav-link .badge {
+    background-color: white !important;
+    color: #404e73;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: 0.3s ease all;
+    font-size: 17px;
 }
 
-section.Banner button.carousel-control-next span:hover, section.Banner button.carousel-control-prev span:hover {
-    background-color: rgb(255, 255, 255);
+nav.navbar form {
+    width: 50%;
+    margin-left: 20px;
+}
+nav.navbar .bottom-btn{
+    bottom: 2%;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+nav.navbar .bottom-btn button{
+    width: 90%;
+}
+nav.navbar form.completeOrder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-content: space-around;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+nav.navbar form input {
+    border-radius: 20px;
+}
+
+/*Cart*/
+nav.navbar .offcanvas .offcanvas-body {
+    background-color: rgb(245, 245, 245);
+    overflow-x: hidden;
+}
+
+nav.navbar .offcanvas .offcanvas-body p.priceRange {
+    font-size: 12px;
+    text-align: right;
+    font-weight: bold;
+}
+
+nav.navbar .offcanvas .progress {
+    height: 7px !important;
+}
+
+nav.navbar .offcanvas .progress .progress-bar {
+    background: linear-gradient(90deg, black 0%, #9E2261 95%, white 100%);
+
+}
+
+nav.navbar .offcanvas .card {
+    background-color: white;
+    border: none;
+    text-align: right;
+}
+
+nav.navbar .offcanvas .card .card-body {
+    padding: 10px 10px 0 0;
+}
+
+nav.navbar .offcanvas .card .card-title {
+    font-size: 11px;
+    margin-bottom: 0;
+}
+
+nav.navbar .offcanvas .card .card-title-span {
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+nav.navbar .cart-body .cart-btn button {
+    width: 90%;
+}
+
+nav.navbar .cart-body .input-group>.form-control, nav.navbar .cart-body .input-group>select {
+    font-size: 13px;
+    padding: 10px;
+    text-align: right;
+    direction: rtl;
+}
+
+nav.navbar .cart-body label.btn.btn-outline-dark {
+    width: 50%;
+}
+
+/*end Cart*/
+
+/*Notification*/
+nav.navbar .navbar-nav .offcanvas-body .offers {
+    margin: auto;
+    padding: 100px 50px;
+}
+
+nav.navbar .navbar-nav .offcanvas-body .offers svg {
+    font-size: 80px;
+    opacity: 0.3;
+    margin-bottom: 30px;
+}
+
+nav.navbar .navbar-nav .offcanvas-body .offers p.emptyNotification {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+nav.navbar .navbar-nav .offcanvas-body .offers p {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/*end notification*/
+
+/*DropDown Mega Menu */
+nav.navbar .dropdown button {
+    background-color: transparent;
+    color: #404e73;
+    border: none;
+    width: 40px;
+    height: 40px;
+    box-shadow: none;
+}
+
+nav.navbar .dropdown button:hover {
+    color: #f28888;
+}
+
+nav.navbar .dropdown {
+    padding: 0;
+    height: 40px !important;
+    width: 40px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.dropdown-toggle::after {
+    display: none !important;
+}
+
+nav.navbar .dropdown-menu {
+    position: absolute;
+    min-height: 300px;
+    top: unset;
+}
+
+nav.navbar .dropdown-menu li {
+    direction: rtl;
+    margin-bottom: 2px;
+}
+
+nav.navbar .dropdown-menu .dropdown-submenu {
+    display: none;
+    position: absolute;
+    right: 100%;
+    bottom: 0px;
+}
+
+nav.navbar .dropdown-menu .dropdown-submenu-left {
+    right: 100%;
+    left: auto;
+}
+
+nav.navbar .dropdown-menu>li:hover>.dropdown-submenu {
+    display: block;
+}
+
+/*End DropDown */
+
+
+nav.navbar .NavParts .list-group .list-group-item {
+    background-color: transparent;
+    border: none;
+
+}
+
+nav.navbar .NavParts .list-group .list-group-item.withBorder {
+    border-left: 1px solid white;
+}
+
+nav.navbar .NavParts .list-group .list-group-item a {
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+nav.navbar .NavParts .list-group .list-group-item a:hover {
+    color: antiquewhite;
+}
+
+.hiddenSearch {
+    display: none;
+    transition: 0.5s ease all;
+    border: none;
+    border: 1px solid #404e73;
+    box-shadow: 3px 6px 5px grey;
+    background-color: #f1f1f1;
+    border-radius: 0;
+    border-top: 0px;
+}
+
+
+
+
+/*********************
+*********************
+End Navbar
+*********************
+*********************/
+
+
+/*********************
+*********************
+Offer Carousel
+*********************
+*********************/
+
+section.OfferCarousel .carousel .carousel-control-prev, section.OfferCarousel .carousel .carousel-control-next {
+    background-color: white;
+    border-radius: 5px;
+    color: #404e73;
+    height: 70px;
+    margin: auto 30px;
+    width: 50px;
+    border: 1px solid #404e73;
+    opacity: 1;
+}
+section.OfferCarousel .carousel-fade .carousel-item{
+    max-height: 330px;
+}
+
+/*********************
+*********************
+End Offer Carousel
+*********************
+*********************/
+
+
+/*********************
+*********************
+ Search Line
+*********************
+*********************/
+section.searchBar .row {
+    /* background-color: #f28888; */
+    border-radius: 15px;
+    filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.199)) ;
+}
+section.searchBar .row input{
+    height: 60px;
+    border: none;
+    border-radius: 15px;
+    color: #404e73;
+    border: 2px solid #404e73;
+    font-size: 18px;
+    padding: 5px 30px;
+    box-shadow: none !important;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px ;
+
+}
+section.searchBar .row button{
+    background-color: #404e73;
+    border: none;
+    border-radius: 15px;
+    box-shadow: none;
+    color: white;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px ;
+}
+/*********************
+*********************
+End Search Line
+*********************
+*********************/
+
+
+
+/*********************
+*********************
+Pink seperator
+*********************
+*********************/
+
+.PinkSeperator .PinkLine {
+    border: 1px solid #404e73;
+    height: 1px;
+    margin: auto;
+}
+
+.PinkSeperator .PinkSectionTitle {
+    color: #f28888;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 20px;
+}
+
+.PinkSeperator .ShowAll a {
+    color: #404e73;
+    font-weight: bolder;
+    text-decoration: none;
+    font-size: 20px;
+}
+.PinkSeperator .ShowAll a svg{
+    transition: 0.3s ease all;
+}
+.PinkSeperator .ShowAll a:hover{
+    color: #242b3f;
+}
+.PinkSeperator .ShowAll a:hover svg{
+    transform: translateX(-10px);
+}
+/*********************
+*********************
+end Pink seperator
+*********************
+*********************/
+
+
+
+/*********************
+*********************
+RoundedImageCarousel
+*********************
+*********************/
+
+section.RoundedImageCarousel {
+    padding: 30px 0px;
+}
+
+
+section.RoundedImageCarousel .carousel .carousel-inner .row {
+    align-content: center;
+    justify-content: space-between;
+}
+
+section.RoundedImageCarousel .carousel .carousel-inner .card {
+    border: none;
+    text-align: center;
+    padding: 10px 0px;
+    margin: 0px;
+    background-color: transparent;
+    position: relative;
+    transition: 0.5s ease all;
+}
+
+section.RoundedImageCarousel .carousel .carousel-inner .card a {
+    text-decoration: none;
+}
+section.RoundedImageCarousel .carousel .carousel-inner .card img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    border: 0.1px solid #0000002c;
+    filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.363));
+}
+section.RoundedImageCarousel .carousel .carousel-inner .card .card-body {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #f28888cb;
+    border-radius: 50%;
+    padding: 0 !important;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s ease all;
+}
+section.RoundedImageCarousel .carousel .carousel-inner .card:hover .card-body {
+    opacity: 1;
+}
+section.RoundedImageCarousel .carousel .carousel-inner .card .card-body .card-title {
+    font-size: 20px;
+    color: white;
+    font-weight: bolder;
+}
+
+section.RoundedImageCarousel .carousel .carousel-control-prev, section.RoundedImageCarousel .carousel .carousel-control-next, .ProductCarouse .carousel .carousel-control-next, .ProductCarouse .carousel .carousel-control-prev {
+    background-color: white;
+    border-radius: 5px;
+    color: #404e73;
+    height: 50px;
+    margin: auto 0px;
+    width: 50px;
+    border: 2px solid #404e73;
+    text-align: center;
+    opacity: 1;
+}
+
+/*********************
+*********************
+End RoundedImageCarousel
+*********************
+*********************/
+
+/*********************
+*********************
+ 3 Cards Part
+*********************
+*********************/
+section.Cards3Part .row {
+    background-color: transparent;
+}
+
+section.Cards3Part .Card3 {
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+
+}
+
+section.Cards3Part .Card3 img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/*********************
+*********************
+ End 3 Cards Part
+*********************
+*********************/
+
+
+
+
+/*********************
+*********************
+ProductCarouse
+*********************
+*********************/
+.ProductCarouse .carousel .carousel-inner .row {
+    background-color: transparent;
+}
+
+.ProductCarouse .carousel .carousel-inner .carousel-item .card, section.category .categoryProduct .card {
+    border: 5px solid #f1f1f1;
+    background-color: white;
+    padding: 0px 5px 10px 5px;
+    position: relative;
+    border-radius: 20px;
+}
+
+section.category .categoryProduct .row {
+    align-content: center;
+    justify-content: space-between;
+}
+
+.ProductCarouse .carousel .carousel-inner .carousel-item .card img, section.category .categoryProduct .card img {
+    padding: 10px;
+}
+
+.ProductCarouse .carousel .carousel-inner .carousel-item .card .newBtn, section.category .categoryProduct .card .newBtn {
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    background-color: #ee524f;
+    color: white;
+    border-radius: 20px;
+    width: 70px;
+    text-align: center;
+}
+
+section.category .categoryProduct .card {
+    width: 19.05%;
+    ;
+}
+
+.ProductCarouse .carousel .carousel-inner .carousel-item .card a, section.category .categoryProduct .card a {
+    text-decoration: none;
+}
+
+.ProductCarouse .carousel .carousel-inner .carousel-item .card h5.card-title, section.category .categoryProduct .card h5.card-title, section.category .categoryProduct .card h5.card-title, .ProductCarouse .carousel .carousel-inner .carousel-item .card h5.card-title span, section.category .categoryProduct .card h5.card-title span {
+    color: #5a5a5a;
+    font-size: 13px;
+    line-height: 17px;
+    margin-bottom: 2px !important;
+}
+
+.ProductCarouse .carousel .carousel-inner .carousel-item .card h5.card-title span, section.category .categoryProduct .card h5.card-title span {
+    font-size: 13px;
+    color: #a7a7a7;
+    font-weight: normal;
+
+}
+
+
+.ProductCarouse .carousel .carousel-inner .carousel-item .card .card-text .rating, section.category .categoryProduct .card .card-text .rating {
+    color: rgb(236 196 0);
+    line-height: 21px;
+    margin-bottom: 2px;
+    font-size: 15px;
+
+}
+
+.ProductCarouse .carousel .carousel-inner .carousel-item .card .card-text .rating .RatingNumber, section.category .categoryProduct .card .card-text .rating .RatingNumber {
+    font-size: 13px;
+    color: #a7a7a7;
+}
+
+.card.CardPrice {
+    width: 100% !important;
+}
+
+.card.CardPrice .Price p.before {
+    text-decoration: line-through;
+    color: #a7a7a7;
+    font-size: 10px;
+    margin-bottom: 0;
+}
+
+.card.CardPrice input.form-control {
+    height: 30px !important;
+}
+
+.card.CardPrice {
+    border: none !important;
+    width: 100% !important;
+}
+
+.card.CardPrice .Price p.after {
+    color: #f28888;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+.card.CardPrice .card-body {
+    padding: 0;
+}
+
+.card.CardPrice .card-body .Sale {
+    background-color: #c425c41a;
+    border-radius: 20px;
+    width: 50px;
+    direction: ltr;
+    color: #f28888;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 5px;
+    line-height: 15px;
+}
+
+/*********************
+*********************
+End ProductCarouse
+*********************
+*********************/
+
+/*********************
+*********************
+BreadCrumb
+*********************
+*********************/
+nav.breadcrumb li a, .breadcrumb-item+.breadcrumb-item::before {
+    font-size: 25px;
+    color: black !important;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.categoryBody .breadcrumb .breadcrumb-item a, .categoryBody .breadcrumb-item+.breadcrumb-item::before {
+    font-size: 10px;
+    line-height: 15px;
+
+}
+
+.categoryBody .breadcrumb-item+.breadcrumb-item::before {
+    margin-top: 5px;
+}
+
+/*********************
+*********************
+End BreadCrumb
+*********************
+*********************/
+
+/*********************
+*********************
+Product Description
+*********************
+*********************/
+section.productDescription {
+    border-top: 4px solid rgb(243, 243, 243);
+
+}
+
+section.productDescription .nav-tabs, section.productDescription .nav-tabs .nav-link {
+    color: rgb(153, 153, 153);
+    border: none;
+    font-weight: bolder;
+    margin-left: 30px;
+    font-size: 17px;
+}
+
+section.productDescription .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: black !important;
+    border: none;
+    border-bottom: 3px solid black !important;
+}
+
+section.productDescription .tab-content>.active {
+    font-size: 15px;
+    margin-top: 20px;
+    line-height: 30px;
+    color: #000000;
+    font-weight: 450;
+}
+
+section.productDescription .tab-content>.active b {
+    color: black;
+}
+
+/*********************
+*********************
+End Product Description
+*********************
+*********************/
+
+
+/*********************
+*********************
+ Product Details
+*********************
+*********************/
+section.productDetails .carousel .carousel-indicators {
+    position: unset;
+    display: unset;
+    margin-left: 0;
+    margin-bottom: 0;
+    margin-right: 0%;
+}
+
+section.productDetails .carousel .carousel-indicators button {
+    width: 50px !important;
+    height: 50px !important;
+    position: relative;
+    padding: 0;
+}
+
+section.productDetails .carousel .carousel-indicators button.like {
+    background-color: rgba(0, 174, 255, 0.137);
+    border-radius: 50%;
+    border: none;
+    color: #404e73;
+    font-size: 20px;
+    margin: 10px 5px;
+}
+
+section.productDetails .carousel .carousel-indicators button.share {
+    background-color: #a7a7a767;
+    border-radius: 50%;
+    border: none;
+    color: #000000;
+    font-size: 20px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+section.productDetails .carousel .carousel-indicators button.active {
+    border: 1px solid #404e73;
+}
+
+section.productDetails .carousel .carousel-indicators button img {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+}
+
+section.productDetails .input-group>.form-control, section.productDetail .input-group>.form-select {
+    width: 10px !important;
+    font-size: 13px;
+    padding: 3px;
+    text-align: center;
+    color: black;
+}
+
+section.productDetails .ProductDescriptionBtn {
+    margin: auto 0;
+}
+
+section.productDetails .input-group .btn {
+    width: 20px;
+    padding: 0;
+    border: 1px solid rgba(128, 128, 128, 0.479);
+}
+
+section.productDetails .addToCart {
+    border-radius: 20px;
+    background-color: #f28888;
+    color: white;
+    width: 100%;
+    font-weight: bold;
+    margin: 15px 0;
+    line-height: 15px;
+}
+
+section.productDetails .deepDetails .card {
+    border: none !important;
+}
+
+section.productDetails .deepDetails .card h5.original {
+    font-size: 13px;
+    color: rgb(0, 170, 0);
+    font-weight: bold;
+}
+
+section.productDetails .deepDetails .card .moreBrand {
+    font-size: 13px;
+    font-weight: bold;
+    color: #111111;
+}
+
+section.productDetails .deepDetails .card .moreBrand span {
+    color: purple;
+}
+
+section.productDetails .deepDetails .card.CardPrice .Price p.before {
+    font-size: 22px;
+}
+
+section.productDetails .deepDetails .card.CardPrice .Price p.after {
+    font-size: 25px;
+}
+
+section.productDetails .deepDetails .card.CardPrice .card-body .Sale {
+    width: 80px;
+    font-size: 25px;
+    text-align: center;
+
+}
+
+section.productDetails .deepDetails .ProductSize .form-check input {
+    background-image: url(../images/faceCream.png);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+}
+
+section.productDetails .deepDetails .ProductSize .form-check input:checked {
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+    border: 1px solid black;
+}
+
+/*********************
+*********************
+End Product Details
+*********************
+*********************/
+
+
+/*********************
+*********************
+Filter Accordion
+*********************
+*********************/
+.category .filter {
+    height: fit-content;
+}
+
+.category .filter .accordion-flush .accordion-item .accordion-button {
+    font-size: 13px;
+    font-weight: bold;
+    box-shadow: none;
+    display: unset;
+}
+
+.category .filter .accordion-flush .accordion-item .accordion-button span {
+    font-size: 15px;
+    font-weight: bold;
+    background-image: url(../images/plus.png);
+    background-size: cover;
+    width: 8px;
+    height: 8px;
+    transition: 0.2s all ease;
+}
+
+.category .filter .accordion-button:not(.collapsed) {
+    color: unset;
+    background-color: unset;
+    box-shadow: none;
+}
+
+.category .filter .accordion-button:not(.collapsed) span {
+    background-image: url(../images/minus.png) !important;
+}
+
+
+.category .filter .accordion-button::after {
+    display: none;
+}
+
+.category .filter .form-control {
+    font-size: 12px;
+}
+
+.category .filter .form-check label.form-check-label {
+    font-size: 13px;
+}
+
+.category .filter .accordion-body {
+    margin-bottom: 20px;
+    padding-right: 15px !important;
+}
+
+.category .filter button.btn.d-md-none.d-inline-block {
+    box-shadow: none;
+}
+
+#filter1 li.list-group-item, #filter2 li.list-group-item, #filter2 .nav-pills .nav-link {
+    border: none;
+    font-size: 15px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    text-align: right;
+    color: black;
+}
+
+#filter2 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background-color: transparent;
+    border: 2px solid #e2e2e2;
+    box-shadow: none;
+    border-left: 3px solid black;
+    color: black;
+    font-weight: bold;
+}
+
+
+#filter2 li.list-group-item {
+    padding: normal 0;
+}
+
+#filter1 li.list-group-item .form-check-input {
+    border-radius: 50%;
+
+}
+
+h5#filter1label, h5#filter2label {
+    font-weight: bold;
+}
+
+.offcanvas-header {
+    border-bottom: 2px solid #e2e2e2;
+}
+
+/*********************
+*********************
+End Filter Accordion 
+*********************
+*********************/
+
+
+
+/*********************
+*********************
+categoryProduct 
+*********************
+*********************/
+.category .categoryProduct .form-select {
+    padding: 5px;
+    width: 250px;
+    font-size: 14px;
+    box-shadow: none;
+}
+
+button.AddToCart.btn {
+    color: white;
+    background-color: #404e73;
+    text-align: center;
+    width: 100%;
+    line-height: 15px;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+/*Pagination*/
+
+.category .categoryProduct nav ul.pagination li {
+
+    width: 36px;
+    height: 36px;
+    margin-left: 10px;
+}
+
+.category .categoryProduct nav ul.pagination li a {
+    border: none;
+    background-color: transparent;
+    color: black;
+    box-shadow: none;
+    text-align: center;
+
+}
+
+.category .categoryProduct nav ul.pagination li a.active {
+    background-color: #f28888;
+    border-radius: 50%;
+    color: white;
+}
+
+/*End Pagination*/
+
+.refundBody {
+    background-color: white !important;
+}
+
+.refundBody .categoryProduct p {
+    font-size: 13px;
+}
+
+/*********************
+*********************
+End categoryProduct 
+*********************
+*********************/
+
+/*********************
+*********************
+Brand 
+*********************
+*********************/
+.brandBody .breadcrumb .breadcrumb-item a, .brandBody .breadcrumb-item+.breadcrumb-item::before {
+    font-size: 20px;
+    line-height: 50px;
+}
+
+.brandBody .breadcrumb {
+    align-content: center;
+    justify-content: center;
+}
+
+.brandBody section.category .categoryProduct .card {
+    width: 23%;
+    box-shadow: 0px 5px 10px rgb(156, 156, 156);
+    transition: 0.5s ease all;
+}
+
+.brandBody section.category .categoryProduct .card:hover {
+    width: 23%;
+    box-shadow: 0px 5px 10px rgb(0, 0, 0);
+}
+
+.brandBody section.category .categoryProduct .card .card-body .card-title {
+    font-weight: bold;
+}
+
+.brandBody section.category .categoryProduct .card:hover .card-body .card-title span {
+    font-weight: bolder;
+    color: #f28888;
+}
+
+/*********************
+*********************
+End Brand 
+*********************
+*********************/
+
+/*********************
+*********************
+Footer
+*********************
+*********************/
+
+footer.footer .whyUs, footer.footer .youNeedHelp {
+    background-color: #F9D9DC;
+    position: relative;
+}
+
+footer.footer .blueLine {
+    background-color: #404e73;
+    color: white;
+    font-weight: bold;
+    width: 20%;
+    margin: 0 auto;
+    border-radius: 20px;
+    padding: 5px;
+    position: absolute;
+    left: 50%;
+    top: -5%;
+    transform: translateX(-50%);
+}
+
+footer.footer .FooterCards {
+    width: 50%;
+}
+
+footer.footer .carousel-item {
+    padding: 10px;
+    background-color: transparent;
+}
+
+footer.footer .FooterCards .card {
+    border: none;
+    padding: 10px;
+    width: 50%;
+    background-color: transparent;
+}
+
+footer.footer .FooterCards .card img {
+    width: 100%;
+}
+
+footer.footer .FooterServices .card-group .card {
+    background-color: transparent;
+    border: none;
+}
+
+footer.footer .FooterServices .card-group .card a {
+    text-decoration: none;
+    color: #000000;
+}
+
+footer.footer .FooterServices .card-group .card img {
+    width: 50%;
+}
+
+footer.footer .FooterServices .card-group .card .card-body h6 {
+    font-weight: 800;
+}
+
+footer.footer .SocialMediaIcons {
+    background-image: url(../images/bg.webp);
+    background-size: cover;
+    background-position: center center
+}
+footer.footer .SocialMediaIcons .overlay{
+    background-color: #404e73b2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer.footer .SocialMediaIcons li.nav-item {
+    width: 70px;
+    height: 70px;
+    background-color: white;
+    margin-left: 30px;
+    border-radius: 50%;
+}
+
+footer.footer .SocialMediaIcons li.nav-item a {
+    font-size: 35px;
+    color: #242b3f;
+    text-align: center;
+    border-radius: 50%;
+transition: 0.3s ease all;
+}
+
+footer.footer .SocialMediaIcons li.nav-item:hover, footer.footer .SocialMediaIcons li.nav-item:hover a {
+    color: #0c0e14;
+    background-color: rgb(231, 231, 231);
     transform: scale(1.1);
 }
 
-/**********
-End Banner
-***********/
+footer.footer .copyRight {
+    background-color: #f28888 ;
+    text-align: center;
+    color: white;
+    font-weight: 15px;
+    padding: 10px;
+}
+
+/*********************
+*********************
+End Footer
+*********************
+*********************/
+
+/*********************
+*********************
+Animation
+*********************
+*********************/
+.PinkSeperator, .RoundedImageCarousel, .Cards3Part, .ProductCarouse, .whyUs, .youNeedHelp, .AnimatedRow {
+    position: relative;
+    transform: translateX(150px);
+    opacity: 0;
+    transition: 0.5s all ease;
+}
+
+.PinkSeperator.active, .RoundedImageCarousel.active, .Cards3Part.active, .ProductCarouse.active, .whyUs.active, .youNeedHelp.active, .FooterCards.active, .FooterServices.active, .AnimatedRow.active {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.FooterCards, .FooterServices {
+    position: relative;
+    transform: translateX(150px);
+    opacity: 0;
+    transition: 1.5s all ease;
+}
+
+.NoBigAnim {
+    transform: translateX(0px) !important;
+    opacity: 1;
+    transition: none;
+}
+
+/*********************
+*********************
+End ANimation
+*********************
+*********************/
+
+
+
+/*********************
+*********************
+*********************
+*********************
+*********************
+*********************
+*********************
+*********************
+
+Media
+
+*********************
+*********************
+*********************
+*********************
+*********************
+*********************/
+
+
+
+/*Tablet*/
+@media (max-width: 991px) {
+    nav .navbar-nav {
+        display: flex;
+        flex-direction: row;
+
+    }
+
+
+
+
+    nav.navbar .navbar-nav a.nav-link {
+        margin-left: 10px;
+    }
+
+    nav.navbar button.SideBar {
+        display: flex !important;
+        align-content: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 0 !important;
+        width: 50px !important;
+        height: 50px !important;
+    }
+
+    section.OfferCarousel .carousel .carousel-control-prev, section.OfferCarousel .carousel .carousel-control-next {
+        height: 40px;
+        margin: auto 10px;
+        width: 20px;
+        font-size: 13px;
+    }
+
+    .PinkSeperator .PinkSectionTitle {
+        font-size: 15px;
+        font-weight: bolder;
+        color: black;
+    }
+
+    .PinkSeperator .ShowAll a {
+        font-size: 13px;
+        font-weight: bolder;
+    }
+
+    section.RoundedImageCarousel .carousel .carousel-inner .card {
+        padding: 20px 0;
+    }
+
+    section.RoundedImageCarousel {
+        padding: 0px 0px;
+    }
+
+    section.RoundedImageCarousel .carousel .carousel-inner .card img {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 0px;
+    }
+    section.RoundedImageCarousel .carousel .carousel-inner .card:hover .card-body{
+        width: 90px;
+        height: 90px;
+        font-size: 14px;
+    }
+    section.RoundedImageCarousel .carousel .carousel-inner .card {
+        margin: 0 0px;
+    }
+
+    section.RoundedImageCarousel .carousel .carousel-control-prev, section.RoundedImageCarousel .carousel .carousel-control-next, .ProductCarouse .carousel .carousel-control-next, .ProductCarouse .carousel .carousel-control-prev {
+        height: 30px;
+        width: 30px;
+        font-size: 11px;
+    }
+
+    section.productDetails .addToCart {
+        font-size: 12px;
+    }
+
+    section.productDetails .deepDetails .card.CardPrice .Price p.after, section.productDetails .deepDetails .card.CardPrice .Price p.before, .card.CardPrice .card-body {
+        text-align: center;
+
+    }
+
+    section.productDescription .nav-tabs, section.productDescription .nav-tabs .nav-link {
+        margin-left: 35px;
+        font-size: 16px;
+    }
+
+    section.productDescription .tab-content>.active {
+        font-size: 11px;
+        line-height: 25px;
+
+    }
+
+    .category .filter .accordion-flush .accordion-item .accordion-button {
+        font-size: 9px;
+        padding: 10px 0px;
+    }
+
+    .category .filter h6 {
+        font-size: 15px;
+    }
+
+    .category .filter .accordion-body {
+        padding-right: 0px !important;
+    }
+
+    .category .filter .form-control {
+        font-size: 10px;
+        padding: 3px;
+    }
+
+    .category .filter .form-check-input {
+        width: 0.7em;
+        height: 0.7em;
+    }
+
+    .category .filter .form-check label.form-check-label {
+        font-size: 9px;
+    }
+
+    .category .categoryProduct h3 {
+        font-size: 13px;
+        margin-bottom: 20px;
+    }
+
+    .category .categoryProduct h3 button.btn.d-md-none.d-inline-block {
+        font-size: 13px;
+        padding: 0 10px;
+    }
+
+    .category .categoryProduct h3 span .form-select {
+        width: unset;
+    }
+
+
+    section.category .categoryProduct .card {
+        width: 48% !important;
+        padding: 0 5px;
+    }
+
+    .ProductCarouse .carousel .carousel-inner .carousel-item .card h5.card-title span, section.category .categoryProduct .card h5.card-title span {
+        font-size: 11px;
+    }
+
+    section.category .categoryProduct .card h5.card-title {
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+
+    section.category .categoryProduct .card .card-text .rating {
+        line-height: 15px;
+        font-size: 13px;
+    }
+
+    section.category .categoryProduct .card .card-text .rating .RatingNumber {
+        font-size: 11px;
+    }
+
+    .category .categoryProduct button.AddToCart.btn {
+        font-size: 13px;
+        line-height: 15px;
+    }
+
+    .card.CardPrice .Price p.after {
+        font-size: 12px;
+    }
+
+    .card.CardPrice .Price p.before {
+        font-size: 9px;
+    }
+
+    section.category .categoryProduct .card.CardPrice {
+        width: 100% !important;
+        margin-bottom: 5px !important;
+    }
+
+    section.category .categoryProduct .card a {
+        border-bottom: 2px solid #80808029;
+    }
+
+    footer.footer .blueLine {
+        width: 60%;
+        top: -2%;
+        padding: 10px 5px 0px 5px !important;
+
+    }
+
+    footer.footer .SocialMediaIcons li.nav-item {
+        margin-left: 20px;
+    }
+
+    .NoAnim {
+        transform: translateX(0px) !important;
+        opacity: 1;
+        transition: none;
+    }
+
+
+
+
+}
+
+@media (max-width: 575px) {
+    .navbar>.container, .navbar>.container-fluid, .navbar>.container-sm, .navbar>.container-md, .navbar>.container-lg, .navbar>.container-xl, .navbar>.container-xxl {
+        flex-wrap: nowrap !important;
+    }
+
+    .hiddenSearch {
+        transition: 1s ease all !important;
+    }
+
+}
