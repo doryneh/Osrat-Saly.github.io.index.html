@@ -379,9 +379,7 @@ section.OfferCarousel .carousel .carousel-control-prev, section.OfferCarousel .c
     border: 1px solid #404e73;
     opacity: 1;
 }
-section.OfferCarousel .carousel-fade .carousel-item{
-    max-height: 330px;
-}
+
 
 /*********************
 *********************
@@ -409,8 +407,8 @@ section.searchBar .row input{
     font-size: 18px;
     padding: 5px 30px;
     box-shadow: none !important;
-    border-bottom-left-radius: 0px;
-    border-top-left-radius: 0px ;
+    border-bottom-left-radius: 0px !important;
+    border-top-left-radius: 0px  !important;
 
 }
 section.searchBar .row button{
@@ -478,21 +476,21 @@ end Pink seperator
 
 /*********************
 *********************
-RoundedImageCarousel
+Categories
 *********************
 *********************/
 
-section.RoundedImageCarousel {
+section.Categories {
     padding: 30px 0px;
 }
 
 
-section.RoundedImageCarousel .carousel .carousel-inner .row {
+section.Categories .carousel .carousel-inner .row {
     align-content: center;
     justify-content: space-between;
 }
 
-section.RoundedImageCarousel .carousel .carousel-inner .card {
+section.Categories .carousel .carousel-inner .card {
     border: none;
     text-align: center;
     padding: 10px 0px;
@@ -502,17 +500,17 @@ section.RoundedImageCarousel .carousel .carousel-inner .card {
     transition: 0.5s ease all;
 }
 
-section.RoundedImageCarousel .carousel .carousel-inner .card a {
+section.Categories .carousel .carousel-inner .card a {
     text-decoration: none;
 }
-section.RoundedImageCarousel .carousel .carousel-inner .card img {
+section.Categories .carousel .carousel-inner .card img {
     border-radius: 50%;
     width: 150px;
     height: 150px;
     border: 0.1px solid #0000002c;
     filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.363));
 }
-section.RoundedImageCarousel .carousel .carousel-inner .card .card-body {
+section.Categories .carousel .carousel-inner .card .card-body {
     position: absolute;
     width: 130px;
     height: 130px;
@@ -528,16 +526,16 @@ section.RoundedImageCarousel .carousel .carousel-inner .card .card-body {
     align-items: center;
     transition: 0.5s ease all;
 }
-section.RoundedImageCarousel .carousel .carousel-inner .card:hover .card-body {
+section.Categories .carousel .carousel-inner .card:hover .card-body {
     opacity: 1;
 }
-section.RoundedImageCarousel .carousel .carousel-inner .card .card-body .card-title {
+section.Categories .carousel .carousel-inner .card .card-body .card-title {
     font-size: 20px;
     color: white;
     font-weight: bolder;
 }
 
-section.RoundedImageCarousel .carousel .carousel-control-prev, section.RoundedImageCarousel .carousel .carousel-control-next, .ProductCarouse .carousel .carousel-control-next, .ProductCarouse .carousel .carousel-control-prev {
+section.Categories .carousel .carousel-control-prev, section.Categories .carousel .carousel-control-next, .ProductCarouse .carousel .carousel-control-next, .ProductCarouse .carousel .carousel-control-prev {
     background-color: white;
     border-radius: 5px;
     color: #404e73;
@@ -551,7 +549,7 @@ section.RoundedImageCarousel .carousel .carousel-control-prev, section.RoundedIm
 
 /*********************
 *********************
-End RoundedImageCarousel
+End Categories
 *********************
 *********************/
 
@@ -707,6 +705,44 @@ section.category .categoryProduct .card {
 End ProductCarouse
 *********************
 *********************/
+.WhiteBG{
+    background-color: white;
+    border-radius: 25px;
+    filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.12));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease all;
+}
+.WhiteBG:hover{
+    filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.247));
+    border-radius: 45px;
+
+
+}
+.WhiteBG:hover img, .WhiteBG:hover .RestaurantName{
+    transform: scale(0.9);
+}
+.WhiteBG img{
+    width: 100%;
+    border-radius: 50%;
+    filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.12));
+    transition: 0.3s ease all;
+}
+a{
+    text-decoration: none !important;
+}
+.RestaurantName {
+    font-size: 25px;
+    margin-top: 10px;
+    font-weight: 600;
+    color: black;
+    transition: 0.1s ease all;
+    text-align: center;
+    
+}
+
 
 /*********************
 *********************
@@ -715,7 +751,7 @@ BreadCrumb
 *********************/
 nav.breadcrumb li a, .breadcrumb-item+.breadcrumb-item::before {
     font-size: 25px;
-    color: black !important;
+    color: #f28888 !important;
     text-decoration: none;
     font-weight: bold;
 }
@@ -1238,14 +1274,21 @@ End Footer
 Animation
 *********************
 *********************/
-.PinkSeperator, .RoundedImageCarousel, .Cards3Part, .ProductCarouse, .whyUs, .youNeedHelp, .AnimatedRow {
+.PinkSeperator,.Restaurants,  .Cards3Part, .ProductCarouse, .whyUs, .youNeedHelp, .AnimatedRow {
     position: relative;
     transform: translateX(150px);
     opacity: 0;
     transition: 0.5s all ease;
 }
-
-.PinkSeperator.active, .RoundedImageCarousel.active, .Cards3Part.active, .ProductCarouse.active, .whyUs.active, .youNeedHelp.active, .FooterCards.active, .FooterServices.active, .AnimatedRow.active {
+footer.footer .SocialMediaIcons li.nav-item,.Categories .carousel-item .card{
+    position: relative;
+    transform: scale(0) !important;
+    transition: 0.5s all ease;
+}
+footer.footer .SocialMediaIcons li.nav-item.active,.Categories .carousel-item .card.active{
+    transform: scale(1) !important;
+}
+.PinkSeperator.active, .Restaurants.active,.Categories.active, .Cards3Part.active, .ProductCarouse.active, .whyUs.active, .youNeedHelp.active, .FooterCards.active, .FooterServices.active, .AnimatedRow.active {
     transform: translateX(0);
     opacity: 1;
 }
@@ -1298,8 +1341,12 @@ Media
         flex-direction: row;
 
     }
-
-
+    .WhiteBG img{
+        width: 75%;
+    }
+    .RestaurantName {
+    
+    font-size: 20px;}
 
 
     nav.navbar .navbar-nav a.nav-link {
@@ -1335,29 +1382,29 @@ Media
         font-weight: bolder;
     }
 
-    section.RoundedImageCarousel .carousel .carousel-inner .card {
+    section.Categories .carousel .carousel-inner .card {
         padding: 20px 0;
     }
 
-    section.RoundedImageCarousel {
+    section.Categories {
         padding: 0px 0px;
     }
 
-    section.RoundedImageCarousel .carousel .carousel-inner .card img {
+    section.Categories .carousel .carousel-inner .card img {
         width: 100px;
         height: 100px;
         margin-bottom: 0px;
     }
-    section.RoundedImageCarousel .carousel .carousel-inner .card:hover .card-body{
+    section.Categories .carousel .carousel-inner .card:hover .card-body{
         width: 90px;
         height: 90px;
         font-size: 14px;
     }
-    section.RoundedImageCarousel .carousel .carousel-inner .card {
+    section.Categories .carousel .carousel-inner .card {
         margin: 0 0px;
     }
 
-    section.RoundedImageCarousel .carousel .carousel-control-prev, section.RoundedImageCarousel .carousel .carousel-control-next, .ProductCarouse .carousel .carousel-control-next, .ProductCarouse .carousel .carousel-control-prev {
+    section.Categories .carousel .carousel-control-prev, section.Categories .carousel .carousel-control-next, .ProductCarouse .carousel .carousel-control-next, .ProductCarouse .carousel .carousel-control-prev {
         height: 30px;
         width: 30px;
         font-size: 11px;

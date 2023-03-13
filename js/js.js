@@ -15,7 +15,7 @@ $(document).ready(function () {
      
     
       function PinkSeperatorAnim() {
-        var reveals = document.querySelectorAll(".PinkSeperator, .RoundedImageCarousel ,.Cards3Part,.ProductCarouse,.whyUs,.youNeedHelp,.FooterCards,.FooterServices ,.AnimatedRow");
+        var reveals = document.querySelectorAll(".PinkSeperator,.Categories .carousel-item .card,footer.footer .SocialMediaIcons li.nav-item,.Restaurants,.RoundedImageCarousel ,.Cards3Part,.ProductCarouse,.whyUs,.youNeedHelp,.FooterCards,.FooterServices ,.AnimatedRow");
       
         for (var i = 0; i < reveals.length; i++) {
           var windowHeight = window.innerHeight;
