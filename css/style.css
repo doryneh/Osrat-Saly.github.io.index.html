@@ -26,7 +26,7 @@ Navbar
 nav.navbar {
     position: relative;
     background-color: #404e73 !important;
- 
+
     text-align: center;
     direction: rtl;
 }
@@ -54,6 +54,7 @@ nav.navbar .offcanvas-start, .offcanvas-start#filter2, .offcanvas-start#filter1 
     -webkit-filter: invert(100%);
     filter: invert(100%);
 }
+
 .OffcanvasButtons {
     background-color: transparent;
     border: none;
@@ -62,6 +63,7 @@ nav.navbar .offcanvas-start, .offcanvas-start#filter2, .offcanvas-start#filter1 
     text-align: start;
     color: black !important;
 }
+
 nav.navbar .offcanvas-start .offcanvas-body {
     padding: 0px 5px;
     background-color: white !important;
@@ -124,7 +126,7 @@ nav.navbar .navbar-nav a.nav-link, nav.navbar .dropdown button, nav.navbar butto
     font-weight: 500;
     font-size: 20px;
     line-height: 25px;
-    color: white ;
+    color: white;
     margin-left: 30px;
     background-color: #f28888;
     border-radius: 10px;
@@ -134,6 +136,7 @@ nav.navbar .navbar-nav a.nav-link, nav.navbar .dropdown button, nav.navbar butto
     box-shadow: none !important;
     transition: 0.2s ease all;
 }
+
 nav.navbar .dropdown button {
     padding: 0;
 }
@@ -158,15 +161,18 @@ nav.navbar form {
     width: 50%;
     margin-left: 20px;
 }
-nav.navbar .bottom-btn{
+
+nav.navbar .bottom-btn {
     bottom: 2%;
     width: 100%;
     left: 50%;
     transform: translateX(-50%);
 }
-nav.navbar .bottom-btn button{
+
+nav.navbar .bottom-btn button {
     width: 90%;
 }
+
 nav.navbar form.completeOrder {
     width: 100%;
     height: 100%;
@@ -396,9 +402,10 @@ End Offer Carousel
 section.searchBar .row {
     /* background-color: #f28888; */
     border-radius: 15px;
-    filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.199)) ;
+    filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.199));
 }
-section.searchBar .row input{
+
+section.searchBar .row input {
     height: 60px;
     border: none;
     border-radius: 15px;
@@ -408,10 +415,11 @@ section.searchBar .row input{
     padding: 5px 30px;
     box-shadow: none !important;
     border-bottom-left-radius: 0px !important;
-    border-top-left-radius: 0px  !important;
+    border-top-left-radius: 0px !important;
 
 }
-section.searchBar .row button{
+
+section.searchBar .row button {
     background-color: #404e73;
     border: none;
     border-radius: 15px;
@@ -422,8 +430,9 @@ section.searchBar .row button{
     justify-content: center;
     align-items: center;
     border-bottom-right-radius: 0px;
-    border-top-right-radius: 0px ;
+    border-top-right-radius: 0px;
 }
+
 /*********************
 *********************
 End Search Line
@@ -457,15 +466,19 @@ Pink seperator
     text-decoration: none;
     font-size: 20px;
 }
-.PinkSeperator .ShowAll a svg{
+
+.PinkSeperator .ShowAll a svg {
     transition: 0.3s ease all;
 }
-.PinkSeperator .ShowAll a:hover{
+
+.PinkSeperator .ShowAll a:hover {
     color: #242b3f;
 }
-.PinkSeperator .ShowAll a:hover svg{
+
+.PinkSeperator .ShowAll a:hover svg {
     transform: translateX(-10px);
 }
+
 /*********************
 *********************
 end Pink seperator
@@ -485,12 +498,12 @@ section.Categories {
 }
 
 
-section.Categories .carousel .carousel-inner .row {
+section.Categories .row {
     align-content: center;
     justify-content: space-between;
 }
 
-section.Categories .carousel .carousel-inner .card {
+section.Categories .card {
     border: none;
     text-align: center;
     padding: 10px 0px;
@@ -500,23 +513,22 @@ section.Categories .carousel .carousel-inner .card {
     transition: 0.5s ease all;
 }
 
-section.Categories .carousel .carousel-inner .card a {
-    text-decoration: none;
-}
-section.Categories .carousel .carousel-inner .card img {
-    border-radius: 50%;
+
+section.Categories .card img, .Categories .WhiteBG {
+    border-radius: 50% !important;
     width: 150px;
     height: 150px;
     border: 0.1px solid #0000002c;
     filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.363));
 }
-section.Categories .carousel .carousel-inner .card .card-body {
+
+section.Categories .card .card-body {
     position: absolute;
     width: 130px;
     height: 130px;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     background-color: #f28888cb;
     border-radius: 50%;
     padding: 0 !important;
@@ -526,17 +538,20 @@ section.Categories .carousel .carousel-inner .card .card-body {
     align-items: center;
     transition: 0.5s ease all;
 }
-section.Categories .carousel .carousel-inner .card:hover .card-body {
+
+section.Categories .card:hover .card-body {
     opacity: 1;
 }
-section.Categories .carousel .carousel-inner .card .card-body .card-title {
+
+section.Categories .card .card-body .card-title {
     font-size: 20px;
     color: white;
     font-weight: bolder;
+    margin-bottom: 0px !important;
 }
 
 section.Categories .carousel .carousel-control-prev, section.Categories .carousel .carousel-control-next, .ProductCarouse .carousel .carousel-control-next, .ProductCarouse .carousel .carousel-control-prev {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.384);
     border-radius: 5px;
     color: #404e73;
     height: 50px;
@@ -705,34 +720,40 @@ section.category .categoryProduct .card {
 End ProductCarouse
 *********************
 *********************/
-.WhiteBG{
-    background-color: white;
-    border-radius: 25px;
-    filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.12));
+.WhiteBG ,.WhiteBG.NotRounded {
+    background-color: white !important;
+    border-radius: 25px !important;
+    filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.12)) !important;
+
+    transition: 0.3s ease all;
+}
+
+.WhiteBG a {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: 0.3s ease all;
 }
-.WhiteBG:hover{
+
+.WhiteBG:hover {
     filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.247));
-    border-radius: 45px;
-
-
 }
-.WhiteBG:hover img, .WhiteBG:hover .RestaurantName{
+
+.WhiteBG:hover img, .WhiteBG:hover .RestaurantName {
     transform: scale(0.9);
 }
-.WhiteBG img{
+
+.WhiteBG img {
     width: 100%;
     border-radius: 50%;
     filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.12));
     transition: 0.3s ease all;
 }
-a{
+
+a {
     text-decoration: none !important;
 }
+
 .RestaurantName {
     font-size: 25px;
     margin-top: 10px;
@@ -740,9 +761,83 @@ a{
     color: black;
     transition: 0.1s ease all;
     text-align: center;
-    
+
 }
 
+.AboutTheStore .StoreIcon {
+    color: #b3b3b3;
+    font-size: 18px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.AboutTheStore .StoreDescription {
+    font-size: 25px;
+    color: #404e73;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.AboutTheStore .WhiteBG .StoreName img {
+    width: 150px !important;
+    filter: none;
+    border-radius: 15px;
+}
+
+.AboutTheStore .WhiteBG:hover {
+    border-radius: 25px;
+    filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.12));
+
+}
+
+.AboutTheStore .WhiteBG:hover img, .AboutTheStore .WhiteBG:hover .RestaurantName {
+    transform: none !important;
+}
+
+.Categories .WhiteBG {
+    border-radius: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Categories .WhiteBG svg {
+    font-size: 50px;
+    color: #404e73;
+}
+.AboutFood .card{
+    background-color: white;
+    border: none;
+    filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.116));
+    border-radius: 25px;
+    transition: 0.2s ease all;
+}
+.AboutFood .card:hover{
+    transform: scale(1.05);
+}
+.AboutFood .card .card-body .card-title{
+    font-size: 25px;
+    font-weight: bold;
+    color: #404e73;
+  
+}
+.AboutFood .card .card-body .card-text{
+    font-size: 20px;
+    font-weight: bold;
+    color: #afafaf;
+}
+.AboutFood .card .card-body .card-text small{
+    font-size: 20px !important;
+    color: #f28888 !important;
+    
+}
+.AboutFood .WhiteBG:hover img{
+    transform: none !important;
+}
+.AboutFood {
+    display: none;
+}
 
 /*********************
 *********************
@@ -1227,12 +1322,14 @@ footer.footer .SocialMediaIcons {
     background-size: cover;
     background-position: center center
 }
-footer.footer .SocialMediaIcons .overlay{
+
+footer.footer .SocialMediaIcons .overlay {
     background-color: #404e73b2;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 footer.footer .SocialMediaIcons li.nav-item {
     width: 70px;
     height: 70px;
@@ -1246,7 +1343,7 @@ footer.footer .SocialMediaIcons li.nav-item a {
     color: #242b3f;
     text-align: center;
     border-radius: 50%;
-transition: 0.3s ease all;
+    transition: 0.3s ease all;
 }
 
 footer.footer .SocialMediaIcons li.nav-item:hover, footer.footer .SocialMediaIcons li.nav-item:hover a {
@@ -1256,7 +1353,7 @@ footer.footer .SocialMediaIcons li.nav-item:hover, footer.footer .SocialMediaIco
 }
 
 footer.footer .copyRight {
-    background-color: #f28888 ;
+    background-color: #f28888;
     text-align: center;
     color: white;
     font-weight: 15px;
@@ -1274,21 +1371,24 @@ End Footer
 Animation
 *********************
 *********************/
-.PinkSeperator,.Restaurants,  .Cards3Part, .ProductCarouse, .whyUs, .youNeedHelp, .AnimatedRow {
+.PinkSeperator, .Restaurants, .Cards3Part, .ProductCarouse, .whyUs, .youNeedHelp, .AnimatedRow {
     position: relative;
     transform: translateX(150px);
     opacity: 0;
     transition: 0.5s all ease;
 }
-footer.footer .SocialMediaIcons li.nav-item,.Categories .carousel-item .card{
+
+footer.footer .SocialMediaIcons li.nav-item, .Categories .carousel-item .card {
     position: relative;
     transform: scale(0) !important;
     transition: 0.5s all ease;
 }
-footer.footer .SocialMediaIcons li.nav-item.active,.Categories .carousel-item .card.active{
+
+footer.footer .SocialMediaIcons li.nav-item.active, .Categories .carousel-item .card.active {
     transform: scale(1) !important;
 }
-.PinkSeperator.active, .Restaurants.active,.Categories.active, .Cards3Part.active, .ProductCarouse.active, .whyUs.active, .youNeedHelp.active, .FooterCards.active, .FooterServices.active, .AnimatedRow.active {
+
+.PinkSeperator.active, .Restaurants.active, .Categories.active, .Cards3Part.active, .ProductCarouse.active, .whyUs.active, .youNeedHelp.active, .FooterCards.active, .FooterServices.active, .AnimatedRow.active {
     transform: translateX(0);
     opacity: 1;
 }
@@ -1332,7 +1432,11 @@ Media
 *********************
 *********************/
 
-
+@media (max-width: 1200px) {
+    .RestaurantName {
+        font-size: 22px;
+    }
+}
 
 /*Tablet*/
 @media (max-width: 991px) {
@@ -1341,12 +1445,19 @@ Media
         flex-direction: row;
 
     }
-    .WhiteBG img{
+
+    .WhiteBG img {
         width: 75%;
     }
+
+    .Categories .WhiteBG svg {
+        font-size: 40px;
+    }
+
     .RestaurantName {
-    
-    font-size: 20px;}
+
+        font-size: 25px;
+    }
 
 
     nav.navbar .navbar-nav a.nav-link {
@@ -1382,7 +1493,7 @@ Media
         font-weight: bolder;
     }
 
-    section.Categories .carousel .carousel-inner .card {
+    section.Categories .card {
         padding: 20px 0;
     }
 
@@ -1390,17 +1501,19 @@ Media
         padding: 0px 0px;
     }
 
-    section.Categories .carousel .carousel-inner .card img {
+    section.Categories .card img, .Categories .WhiteBG {
         width: 100px;
         height: 100px;
         margin-bottom: 0px;
     }
-    section.Categories .carousel .carousel-inner .card:hover .card-body{
+
+    section.Categories .card:hover .card-body {
         width: 90px;
         height: 90px;
         font-size: 14px;
     }
-    section.Categories .carousel .carousel-inner .card {
+
+    section.Categories .card {
         margin: 0 0px;
     }
 
@@ -1461,9 +1574,11 @@ Media
         font-size: 13px;
         margin-bottom: 20px;
     }
-    .ProductCarouse .carousel .carousel-inner .carousel-item .card .newBtn, section.category .categoryProduct .card .newBtn{
+
+    .ProductCarouse .carousel .carousel-inner .carousel-item .card .newBtn, section.category .categoryProduct .card .newBtn {
         font-size: 13px;
     }
+
     .category .categoryProduct h3 button.btn.d-md-none.d-inline-block {
         font-size: 13px;
         padding: 0 10px;
@@ -1540,36 +1655,58 @@ Media
 
 
 }
+@media (max-width: 767px){
+    section.Categories .card img, .Categories .WhiteBG{
+        width: 130px;
+        height: 130px;
+    }
+    .AboutTheStore  .WhiteBG{
+        flex-direction: column;
+
+    }
+}
 
 @media (max-width: 575px) {
     .navbar>.container, .navbar>.container-fluid, .navbar>.container-sm, .navbar>.container-md, .navbar>.container-lg, .navbar>.container-xl, .navbar>.container-xxl {
         flex-wrap: nowrap !important;
     }
-    nav.navbar .NavParts .list-group .list-group-item{
+
+    .Categories .WhiteBG svg {
+        font-size: 45px;
+    }
+
+    nav.navbar .NavParts .list-group .list-group-item {
         margin-left: 15px;
         padding: 0;
     }
-    nav.navbar .navbar-brand img{
+
+    nav.navbar .navbar-brand img {
         width: 90%;
     }
-    nav.navbar .navbar-nav a.nav-link, nav.navbar .dropdown button, nav.navbar button.SideBar{
+
+    nav.navbar .navbar-nav a.nav-link, nav.navbar .dropdown button, nav.navbar button.SideBar {
         width: 40px;
         height: 40px;
         font-size: 15px;
     }
+
     nav.navbar .navbar-nav a.nav-link .badge {
-    font-size: 10px;
+        font-size: 10px;
     }
-    section.searchBar{
+
+    section.searchBar {
         margin: 20px 0px;
     }
+
     section.searchBar .row input {
-        height: 50px;   
+        height: 50px;
     }
-    nav.navbar .NavParts .list-group .list-group-item a{
+
+    nav.navbar .NavParts .list-group .list-group-item a {
         font-size: 14px;
 
     }
+
     .hiddenSearch {
         transition: 1s ease all !important;
     }

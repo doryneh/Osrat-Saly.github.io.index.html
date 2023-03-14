@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.rtl.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <title>Store</title>
+</head>
+
+<body>
+
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light d-flex pt-3">
+        <div class="container ">
+
+
+            <a class="navbar-brand" href="index.html"><img src="./images/Logo.jpg" alt="Logo"></a>
+
+
+            <div class="NavParts">
+                <ul class="list-group list-group-horizontal">
+                    <li class="list-group-item me-4"><a href="Restaurants.html"> جميع الأقسام </a></li>
+                    <li class="list-group-item"><a href="Restaurants.html">العروض</a></li>
+                </ul>
+            </div>
+
+            <div class="navbar-nav  ">
+                <a class="nav-link btn" href="#searchBar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+                <!--Notification-->
+                <a class="nav-link position-relative btn" data-bs-toggle="offcanvas" href="#offcanvasNotification"
+                    role="button" aria-controls="offcanvasNotification"><i class="fa-solid fa-bell"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                        3
+                        <span class="visually-hidden">unread messages</span>
+                    </span>
+                </a>
+
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNotification"
+                    aria-labelledby="offcanvasExampleLabel">
+                    <div class="offcanvas-header text-center">
+                        <h5 class="offcanvas-title mx-auto" id="offcanvasExampleLabel" style="width: 100%;">
+                            <b>الإشعارات </b>
+                        </h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body " style="background-color: white;">
+                        <h6 class="priceRange text-center pb-3" style="border-bottom:2px solid black ; ">
+                            <b>العروض</b>
+                            <br>
+                        </h6>
+                        <div class="offers my-auto">
+                            <i class="fa-solid fa-gift"></i>
+                            <div>
+                                <p class="emptyNotification">
+                                    صندوق العروض فارغ
+                                </p>
+                                <p>
+                                    لا توجد عروض جديدة
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Notification-->
+
+                <!--Cart-->
+                <a class="nav-link position-relative btn " data-bs-toggle="offcanvas" href="#offcanvasExample"
+                    role="button" aria-controls="offcanvasExample"><i class="fa-solid fa-cart-shopping"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                        1
+                        <span class="visually-hidden"> Number of Items in cart</span>
+                    </span>
+                </a>
+                <div class="offcanvas offcanvas-end  " tabindex="-1" id="offcanvasExample"
+                    aria-labelledby="offcanvasExampleLabel">
+                    <div class="offcanvas-header text-center">
+                        <h5 class="offcanvas-title mx-auto" id="offcanvasExampleLabel" style="width: 100%;">
+                            <b>سلة التسوق</b> <span class="float-start"><i class="fa-solid fa-share-nodes"></i></span>
+                        </h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body cart-body position-relative">
+                        <p class="priceRange">
+                            هل ترغب بشحن مجاني؟ أضف 335.94 ريال إلى سلتك
+                            <br>
+                        <div class="progress" style="height: 1px;">
+                            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25"
+                                aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        </p>
+
+                        <div class="card WhiteBG mb-3 CartItem" style="max-width: 540px;">
+                            <div class="row g-0">
+                                <div class="col-3 my-auto">
+                                    <img src="./images/product.png" class="img-fluid rounded-start" alt="...">
+                                </div>
+                                <div class="col-9">
+                                    <div class="card-body">
+                                        <p class="card-title">essence <button class="btn trash float-end"><i
+                                                    class="fa-solid fa-trash"></i></button>
+                                            <br>
+                                            <span class="card-title-span">
+                                                ماسكرا اي لوف اكستريم كريزي فوليوم من ايسنس
+
+                                            </span>
+
+                                        </p>
+                                        <div class="card WhiteBG CardPrice mb-1">
+                                            <div class="row g-0">
+                                                <div class="col-5 Price">
+                                                    <p class="before"><s> 120 ريال </s></p>
+                                                    <p class="after">90 ريال </p>
+
+                                                </div>
+                                                <div class="">
+                                                    <div class="card-body ">
+                                                        <div class="input-group">
+                                                            <span class="input-group-btn">
+                                                                <button type="button" class="btn btn-default btn-number"
+                                                                    data-type="minus" data-field="quant[1]">
+                                                                    <i class="fa-solid fa-minus"></i>
+                                                                </button>
+                                                            </span>
+                                                            <input type="text" name="quant[1]"
+                                                                class="form-control input-number" value="8" min="0"
+                                                                max="99">
+                                                            <span class="input-group-btn">
+                                                                <button type="button" class="btn btn-default btn-number"
+                                                                    data-type="plus" data-field="quant[1]">
+                                                                    <i class="fa-solid fa-plus"></i>
+                                                                </button>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card WhiteBG mb-3 CartItem" style="max-width: 540px;">
+                            <div class="row g-0">
+                                <div class="col-3 my-auto">
+                                    <img src="./images/product.png" class="img-fluid rounded-start" alt="...">
+                                </div>
+                                <div class="col-9">
+                                    <div class="card-body">
+                                        <p class="card-title">essence <button class="btn trash float-end"><i
+                                                    class="fa-solid fa-trash"></i></button>
+                                            <br>
+                                            <span class="card-title-span">
+                                                ماسكرا اي لوف اكستريم كريزي فوليوم من ايسنس
+
+                                            </span>
+                                        </p>
+                                        <div class="card WhiteBG CardPrice mb-1">
+                                            <div class="row g-0">
+                                                <div class="col-5 Price">
+                                                    <p class="before"><s> 120 ريال </s></p>
+                                                    <p class="after">90 ريال </p>
+
+                                                </div>
+                                                <div class="">
+                                                    <div class="card-body ">
+                                                        <div class="input-group">
+                                                            <span class="input-group-btn">
+                                                                <button type="button" class="btn btn-default btn-number"
+                                                                    data-type="minus" data-field="quant[1]">
+                                                                    <i class="fa-solid fa-minus"></i>
+                                                                </button>
+                                                            </span>
+                                                            <input type="text" name="quant[1]"
+                                                                class="form-control input-number" value="8" min="0"
+                                                                max="99">
+                                                            <span class="input-group-btn">
+                                                                <button type="button" class="btn btn-default btn-number"
+                                                                    data-type="plus" data-field="quant[1]">
+                                                                    <i class="fa-solid fa-plus"></i>
+                                                                </button>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class=" cart-btn bottom-btn position-absolute">
+                        <p>
+                            <b>الإجمالي : 2 منتجات - 18.60 ريال</b>
+                        </p>
+                        <button class="btn btn-dark p-3" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#CompleteOrder" aria-controls="CompleteOrder">
+                            إتمام الطلب
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--End Cart-->
+        </div>
+        </div>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="CompleteOrder" aria-labelledby="CompleteOrderLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="CompleteOrderLabel">أهلا بك</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body cart-body">
+                <form action="" method="post" class="completeOrder">
+
+
+                    <div class="form-group mb-5">
+                        <div class="input-group ">
+                            <input type="text" class="form-control" placeholder="الإسم الأول والأخير"
+                                aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+
+                        <div class="input-group ">
+                            <input type="radio" class="btn-check w-50" name="options-outlined" id="success-outlined"
+                                autocomplete="off" checked>
+                            <label class="btn btn-outline-dark" for="success-outlined">ذكر</label>
+
+                            <input type="radio" class="btn-check w-50" name="options-outlined" id="danger-outlined"
+                                autocomplete="off">
+                            <label class="btn btn-outline-dark" for="danger-outlined"> أنثى</label>
+                        </div>
+
+
+                        <div class="input-group ">
+
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>حدد المحافظة</option>
+                                <option value="1">صنعاء</option>
+                                <option value="2">عدن</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group ">
+                            <input type="number" class="form-control" aria-label="" placeholder="رقم الهاتف">
+                        </div>
+
+                        <div class="input-group ">
+                            <input type="text" class="form-control" placeholder="العنوان" aria-label="password">
+                        </div>
+
+                        <div class="input-group ">
+                            <input type="text" class="form-control" placeholder="أسم المستلم كامل"
+                                aria-label="password">
+                        </div>
+                        <div class="input-group ">
+                            <input type="number" class="form-control" aria-label=""
+                                placeholder=" رقم هاتف المستلم للطلب                         ">
+                        </div>
+
+                        <div class="input-group ">
+                            <input type="text" class="form-control"
+                                placeholder="عنوان المسلم للطلب بالتحديد                        " aria-label="password">
+                        </div>
+
+                        <div class="input-group">
+                            بتسجيلك، انت توافق على
+                            <a href="policy.html">
+                                الشروط والأحكام
+                            </a>
+                        </div>
+                    </div>
+                    <div class=" cart-btn">
+                        <button class="btn btn-dark p-3" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#CompleteOrder" aria-controls="CompleteOrder">
+                            تسجيل جديد
+                        </button>
+
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!--End Navbar-->
+
+    <!--About The Store-->
+    <section class="AboutTheStore mt-5" id="AboutTheStore">
+        <div class="container">
+            <div class="WhiteBG d-flex align-items-center justify-content-between p-4">
+
+                <div class="StoreName">
+                    <img src="images/Al Beik.jpg" alt="" width="40">
+                </div>
+                <div class="StoreDescription">
+                    طازج من الفرن ,مباشرة الى مائدتك
+                </div>
+                <div class="StoreIcon">
+                    text text
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--ENd About The store-->
+
+
+    <!--Rounded Carousel 1 -->
+    <section class="Categories  my-4 " id="">
+        <div class="container">
+
+            <div id="RoundedImageCarousel1" class="">
+            
+                    <div class="py-3">
+                        <div class="row">
+                            <div class="col-md-2 col-sm-4 col-6 mx-auto">
+                                <div class="card">
+                                    <a type="button" class="WhiteBG">
+                                        <i class="fa-solid fa-utensils"></i>
+
+                                        <div class="card-body text-center">
+                                            <h5 class="card-title">المقبلات</h5>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-2  col-sm-4 col-6 mx-auto">
+                                <div class="card">
+                                    <a type="button" class="WhiteBG">
+
+                                        <i class="fa-solid fa-burger"></i>
+                                        <div class="card-body text-center">
+                                            <h5 class="card-title"> برجر</h5>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-2  col-sm-4 col-6 mx-auto">
+                                <div class="card">
+                                    <a type="button" class="WhiteBG">
+                                        <i class="fa-solid fa-mug-hot"></i>
+                                        <div class="card-body text-center">
+                                            <h5 class="card-title">مشروبات ساخنة</h5>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-2  col-sm-4 col-6 mx-auto">
+                                <div class="card">
+                                    <a type="button" class="WhiteBG">
+                                        <i class="fa-solid fa-shrimp"></i>
+
+                                        <div class="card-body text-center">
+                                            <h5 class="card-title"> مأكولات بحرية </h5>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-2  col-sm-4 col-6 mx-auto">
+                                <div class="card">
+                                    <a type="button" class="WhiteBG">
+
+                                        <i class="fa-solid fa-carrot"></i>
+                                        <div class="card-body text-center">
+                                            <h5 class="card-title">سلطات</h5>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-2  col-sm-4 col-6 mx-auto">
+                                <div class="card">
+                                    <a type="button" class="WhiteBG">
+
+                                        <i class="fa-solid fa-pizza-slice"></i>
+                                        <div class="card-body text-center">
+                                            <h5 class="card-title"> بيتزا</h5>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-2  col-sm-4 col-6 mx-auto">
+                                <div class="card">
+                                    <a type="button" class="WhiteBG">
+
+                                        <i class="fa-solid fa-pizza-slice"></i>
+                                        <div class="card-body text-center">
+                                            <h5 class="card-title"> بيتزا</h5>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-2  col-sm-4 col-6 mx-auto">
+                                <div class="card">
+                                    <a type="button" class="WhiteBG">
+
+                                        <i class="fa-solid fa-pepper-hot"></i>
+                                        <div class="card-body text-center">
+                                            <h5 class="card-title"> مكسيكي</h5>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-2  col-sm-4 col-6 mx-auto">
+                                <div class="card">
+                                    <a type="button" class="WhiteBG">
+
+                                        <i class="fa-solid fa-ice-cream"></i>
+                                        <div class="card-body text-center">
+                                            <h5 class="card-title"> مثلجات</h5>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-2  col-sm-4 col-6 mx-auto">
+                                <div class="card">
+                                    <a type="button" class="WhiteBG">
+
+                                        <i class="fa-solid fa-whiskey-glass"></i>
+                                        <div class="card-body text-center">
+                                            <h5 class="card-title"> مشروبات باردة</h5>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-2  col-sm-4 col-6 mx-auto">
+                                <div class="card">
+                                    <a type="button" class="WhiteBG">
+
+                                        <i class="fa-solid fa-cake-candles"></i>
+                                        <div class="card-body text-center">
+                                            <h5 class="card-title"> كيكات</h5>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-2  col-sm-4 col-6 mx-auto">
+                                <div class="card">
+                                    <a type="button" class="WhiteBG">
+
+                                        <i class="fa-solid fa-hotdog"></i>
+                                        <div class="card-body text-center">
+                                            <h5 class="card-title"> هوت دوغز</h5>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+               
+        </div>
+    </section>
+
+
+    <!--End Rounded Carousel 1 -->
+
+    <!--Food Details -->
+    <section class="AboutFood" id="AboutFood">
+        <div class="container">
+            <div class="row WhiteBG p-4 NotRounded mt-5 w-100 mx-0 "  >
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card">
+                            <div class="row g-0">
+                              <div class="col-sm-3  d-flex">
+                                <img src="images/Food1.jpg" class="img-fluid rounded-start m-auto" alt="Food1">
+                              </div>
+                              <div class="col-sm-9">
+                                <div class="card-body">
+                                  <h5 class="card-title"> سوسو واو</h5>
+                                  <p class="card-text">طبق لحمة خفيف مع جبنة</p>
+                                  <p class="card-text"><small class="text-muted">50 ريال</small></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 mt-3 mt-sm-0">
+                        <div class="card">
+                            <div class="row g-0">
+                              <div class="col-sm-3  d-flex">
+                                <img src="images/Food1.jpg" class="img-fluid rounded-start m-auto" alt="Food1">
+                              </div>
+                              <div class="col-sm-9">
+                                <div class="card-body">
+                                  <h5 class="card-title"> سوسو واو</h5>
+                                  <p class="card-text">طبق لحمة خفيف مع جبنة</p>
+                                  <p class="card-text"><small class="text-muted">50 ريال</small></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 mt-3 mt-md-0">
+                        <div class="card">
+                            <div class="row g-0">
+                              <div class="col-sm-3  d-flex">
+                                <img src="images/Food1.jpg" class="img-fluid rounded-start m-auto" alt="Food1">
+                              </div>
+                              <div class="col-sm-9">
+                                <div class="card-body">
+                                  <h5 class="card-title"> سوسو واو</h5>
+                                  <p class="card-text">طبق لحمة خفيف مع جبنة</p>
+                                  <p class="card-text"><small class="text-muted">50 ريال</small></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 mt-3">
+                        <div class="card">
+                            <div class="row g-0">
+                              <div class="col-sm-3  d-flex">
+                                <img src="images/Food1.jpg" class="img-fluid rounded-start m-auto" alt="Food1">
+                              </div>
+                              <div class="col-sm-9">
+                                <div class="card-body">
+                                  <h5 class="card-title"> سوسو واو</h5>
+                                  <p class="card-text">طبق لحمة خفيف مع جبنة</p>
+                                  <p class="card-text"><small class="text-muted">50 ريال</small></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 mt-3">
+                        <div class="card">
+                            <div class="row g-0">
+                              <div class="col-sm-3  d-flex">
+                                <img src="images/Food1.jpg" class="img-fluid rounded-start m-auto" alt="Food1">
+                              </div>
+                              <div class="col-sm-9">
+                                <div class="card-body">
+                                  <h5 class="card-title"> سوسو واو</h5>
+                                  <p class="card-text">طبق لحمة خفيف مع جبنة</p>
+                                  <p class="card-text"><small class="text-muted">50 ريال</small></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <div class="PinkSeperator mb-3 mt-4">
+        <div class="container">
+
+            <div class="row mt-5">
+
+                <div class="col-12 PinkSectionTitle text-start" style="font-size: 35px;">
+                    إقترحنا لك
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <section class="Restaurants" id="Restaurants">
+        <div class="container">
+            <div class="row my-5 justify-content-between">
+                <div class="col-lg-2 col-sm-4 col-6">
+                    <div class="WhiteBG p-4">
+                        <a href="">
+                            <img src="images/Al Beik.jpg" alt="Al Beik">
+                            <div class="RestaurantName">
+                                البيك
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-sm-4  col-6">
+                    <div class="WhiteBG p-4">
+                        <a href="">
+                            <img src="images/AlTazaj.png" alt="AlTazaj">
+                            <div class="RestaurantName">
+                                الطازج
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-sm-4  mt-3 mt-sm-0 col-6">
+                    <div class="WhiteBG p-4">
+                        <a href="">
+                            <img src="images/FiveGuysLogo.webp" alt="FiveGuysLogo">
+                            <div class="RestaurantName">
+                                فايف غايز
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-sm-4 mt-3 mt-lg-0 col-6">
+                    <div class="WhiteBG p-4">
+                        <a href="">
+                            <img src="images/BK.jpg" alt="BK">
+                            <div class="RestaurantName">
+                                برغر كينج
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-sm-4  mt-3 mt-lg-0 col-6">
+                    <div class="WhiteBG p-4">
+                        <a href="">
+                            <img src="images/McDonalds-logo.png" alt="McDonalds">
+                            <div class="RestaurantName">
+                                ماكدونالز
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-sm-4  mt-3 mt-lg-0 col-6">
+                    <div class="WhiteBG p-4">
+                        <a href="">
+                            <img src="images/McDonalds-logo.png" alt="McDonalds">
+                            <div class="RestaurantName">
+                                ماكدونالز
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--footer-->
+    <footer class="footer mt-5 ">
+
+        <div class="SocialMediaIcons  position-relative">
+            <div class="overlay py-5">
+                <div class="blueLine text-center">
+                    <h3 class="mb-0">تابعونا </h3>
+                </div>
+                <div class="container pt-4">
+                    <ul class="nav justify-content-center">
+                        <li class="nav-item">
+                            <a class="nav-link " href="#"><i class="fa-brands fa-tiktok"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa-brands fa-twitter"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa-brands fa-instagram"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="#"><i
+                                    class="fa-brands fa-facebook-f"></i></a>
+                        </li>
+                    </ul>
+                    <br>
+                    <ul class="nav justify-content-center">
+                        <li class="nav-item">
+                            <a class="nav-link " href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa-brands fa-youtube"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa-brands fa-snapchat"></i></a>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <div class="copyRight">
+            كل الحقوق محفوظة
+            <br>
+            متجر ياقوت
+        </div>
+    </footer>
+    <!--ENd FOoter-->
+</body>
+
+<script src="assets/js/jquery-3.6.1.min.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/all.js"></script>
+<script src="js/js.js"></script>
+
+</html>
