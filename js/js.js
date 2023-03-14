@@ -1,8 +1,8 @@
 $(document).ready(function () {
 
-/**********
-Delete Card 
-***********/
+  /**********
+  Delete Card 
+  ***********/
   function removeCard() {
     // Implement the click handler here for button of class 'remove'
     $('.trash').click(function () {
@@ -13,9 +13,9 @@ Delete Card
   removeCard();
 
 
-/**********
-Animation
-***********/
+  /**********
+  Animation
+  ***********/
   function PinkSeperatorAnim() {
     var reveals = document.querySelectorAll(".PinkSeperator,.Categories .carousel-item .card,footer.footer .SocialMediaIcons li.nav-item,.Restaurants,.RoundedImageCarousel ,.Cards3Part,.ProductCarouse,.whyUs,.youNeedHelp,.FooterCards,.FooterServices ,.AnimatedRow");
 
@@ -42,6 +42,22 @@ Animation
    ***********/
   $(".Categories .WhiteBG").click(function () {
     $("#AboutFood").css("display", "block");
+  });
+
+
+  /**********
+     Checked label css 
+     ***********/
+  // Add a change event listener to the radio buttons
+  $('.ProductSize .form-check input[type="radio"]').change(function () {
+    // Get the label associated with the checked input
+    var label = $('label[for="' + $(this).attr('id') + '"]');
+
+    // Remove the "active" class from all labels
+    $('label').removeClass('active');
+
+    // Add the "active" class to the label associated with the checked input
+    label.addClass('active');
   });
 
 

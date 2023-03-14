@@ -11,10 +11,7 @@ body, body.categoryBody {
     background-color: #f1f1f1 !important;
 }
 
-body.productBody {
-    background-color: #ffffff !important;
 
-}
 
 
 
@@ -872,36 +869,29 @@ End BreadCrumb
 Product Description
 *********************
 *********************/
-section.productDescription {
-    border-top: 4px solid rgb(243, 243, 243);
 
-}
 
 section.productDescription .nav-tabs, section.productDescription .nav-tabs .nav-link {
-    color: rgb(153, 153, 153);
+    color: #f28888 !important;
     border: none;
     font-weight: bolder;
     margin-left: 30px;
-    font-size: 17px;
+    font-size: 25px;
 }
 
 section.productDescription .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
-    color: black !important;
-    border: none;
-    border-bottom: 3px solid black !important;
+
+    border-bottom: 3px solid #f28888  !important;
 }
 
 section.productDescription .tab-content>.active {
     font-size: 15px;
     margin-top: 20px;
     line-height: 30px;
-    color: #000000;
+    color: #404e73;
     font-weight: 450;
 }
 
-section.productDescription .tab-content>.active b {
-    color: black;
-}
 
 /*********************
 *********************
@@ -931,19 +921,19 @@ section.productDetails .carousel .carousel-indicators button {
 }
 
 section.productDetails .carousel .carousel-indicators button.like {
-    background-color: rgba(0, 174, 255, 0.137);
+    background-color: #f2888823;
     border-radius: 50%;
     border: none;
-    color: #404e73;
+    color: #f28888;
     font-size: 20px;
     margin: 10px 5px;
 }
 
 section.productDetails .carousel .carousel-indicators button.share {
-    background-color: #a7a7a767;
+    background-color: #404e7367;
     border-radius: 50%;
     border: none;
-    color: #000000;
+    color: #404e73;
     font-size: 20px;
     margin-right: 5px;
     margin-left: 5px;
@@ -952,6 +942,15 @@ section.productDetails .carousel .carousel-indicators button.share {
 section.productDetails .carousel .carousel-indicators button.active {
     border: 1px solid #404e73;
 }
+section.productDetails .WhiteBG .carousel  img{
+    border-radius: 25px !important;
+}
+section.productDetails .WhiteBG:hover img{
+    transform: none !important;
+}
+section.productDetails .carousel .carousel-indicators button img {
+    border-radius: 0px !important;
+}
 
 section.productDetails .carousel .carousel-indicators button img {
     width: 50px;
@@ -959,7 +958,7 @@ section.productDetails .carousel .carousel-indicators button img {
     position: absolute;
     top: 50%;
     right: 50%;
-    transform: translate(50%, -50%);
+    transform: translate(50%, -50%) !important;
 }
 
 section.productDetails .input-group>.form-control, section.productDetail .input-group>.form-select {
@@ -1024,20 +1023,21 @@ section.productDetails .deepDetails .card.CardPrice .card-body .Sale {
     text-align: center;
 
 }
-
 section.productDetails .deepDetails .ProductSize .form-check input {
-    background-image: url(../images/faceCream.png);
+    display: none;
+}
+section.productDetails .deepDetails .ProductSize .form-check label img {
     width: 70px;
     height: 70px;
     border-radius: 50%;
-    filter: blur(2px);
-    -webkit-filter: blur(2px);
+    filter: blur(1px);
+    -webkit-filter: blur(1px);
 }
 
-section.productDetails .deepDetails .ProductSize .form-check input:checked {
+section.productDetails .deepDetails .ProductSize .form-check label.active img {
     filter: blur(0px);
     -webkit-filter: blur(0px);
-    border: 1px solid black;
+    border: 1px solid #f28888;
 }
 
 /*********************
