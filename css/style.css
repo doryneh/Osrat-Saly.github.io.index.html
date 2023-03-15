@@ -803,10 +803,7 @@ a {
     align-items: center;
 }
 
-.Categories .WhiteBG svg {
-    font-size: 50px;
-    color: #404e73;
-}
+
 
 .AboutFood .card {
     background-color: white;
@@ -846,6 +843,53 @@ a {
 .AboutFood {
     display: none;
 }
+.Categories.FoodType {
+    background-color: #404e73;
+}
+.Categories.FoodType  .PinkSectionTitle{
+    color: white;
+    font-size: 50px !important;
+}
+.FoodType .card{
+    height: 100%;
+}
+.FoodType a.WhiteBG{
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    border-radius: 15px !important;
+    padding: 10px !important;
+    transition: 0.4s ease all;
+}
+section.Categories.FoodType .card a.WhiteBG:hover{
+    background-color: #f28888 !important;
+} 
+section.Categories.FoodType .card a.WhiteBG:hover .card-title{
+    color: white;
+}
+section.Categories.FoodType .card .card-body{
+    position: relative;opacity: 1;
+    transform: unset;
+    left: unset;
+    top: unset;
+    border-radius: unset;
+    background-color: transparent;
+    height: unset;
+    width: unset;
+    padding: 20px 0px !important;
+}
+section.Categories.FoodType .card .card-body .card-title{
+    color: #f28888;
+    transition: 0.4s ease all;
+
+}
+section.Categories.FoodType .card img{
+    border-radius: unset  !important; 
+    width: unset;
+    height: unset;
+    border: none;
+    filter:none;
+}
 
 /*********************
 *********************
@@ -874,6 +918,45 @@ nav.breadcrumb li a, .breadcrumb-item+.breadcrumb-item::before {
 End BreadCrumb
 *********************
 *********************/
+
+
+/*********************
+*********************
+Contact Us
+*********************
+*********************/
+section.ContactUs form label{
+    font-size: 17px;
+    font-weight: bold ;
+    margin-bottom: 10px;
+}
+section.ContactUs form input,section.ContactUs form textarea{
+    direction: rtl;
+    border-radius: 10px !important;
+    padding: 10px;
+    box-shadow: none !important;
+}
+.ContactTitle h1{
+    color: #404e73;
+    border-bottom: 1px solid #404e73 !important;
+    width: fit-content;
+    padding: 0px 50px 10px;
+    margin: auto;
+}
+.SubmitBTn{
+    direction: ltr;
+}
+.ContactTitle svg{
+    color: #f28888;
+}
+/*********************
+*********************
+End Contact Us
+*********************
+*********************/
+
+
+
 
 /*********************
 *********************
@@ -1100,19 +1183,24 @@ Cart
     direction: ltr;
 }
 
-.TotalRow .col-12 button {
-    border-radius: 8px;
-    background-color: #404e73;
-    font-size: 20px;
-    font-weight: 600;
+.TotalRow .col-12 button,.SubmitMessage {
+    border-radius: 8px !important;
+    background-color: #404e73 ;
+    font-size: 20px !important;
+    font-weight: 600 !important;
     width: 25%;
-    border: none;
+    border: none !important;
 }
 
-.TotalRow .col-12 button:hover {
-    background-color: #242b3f;
+.TotalRow .col-12 button:hover,.SubmitMessage:hover {
+    background-color: #242b3f ;
 }
-
+.SubmitMessage {
+    background-color: #f28888 !important;
+}
+.SubmitMessage:hover {
+    background-color: #b66666 !important;
+}
 /*********************
 *********************
 End Cart
@@ -1223,6 +1311,7 @@ Animation
     transition: 1.5s all ease;
 }
 
+
 .NoBigAnim {
     transform: translateX(0px) !important;
     opacity: 1;
@@ -1235,7 +1324,34 @@ End ANimation
 *********************
 *********************/
 
+/*********************
+*********************
+TermsANd COnditions Page
+*********************
+*********************/
 
+.PolicyPage h1 {
+    color: #404e73;
+}
+.PolicyPage p{
+    color: #000000;
+}
+.PolicyPage p b{
+    color: #f28888;
+    font-size: 25px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+
+
+
+
+/*********************
+*********************
+ENd TermsANd COnditions Page
+*********************
+*********************/
 
 /*********************
 *********************
@@ -1273,9 +1389,7 @@ Media
         width: 75%;
     }
 
-    .Categories .WhiteBG svg {
-        font-size: 40px;
-    }
+   
 
     .RestaurantName {
 
@@ -1491,19 +1605,24 @@ Media
         width: 130px;
         height: 130px;
     }
-    .navbar > .container, .navbar > .container-fluid, .navbar > .container-sm, .navbar > .container-md, .navbar > .container-lg, .navbar > .container-xl, .navbar > .container-xxl{
+
+    .navbar>.container, .navbar>.container-fluid, .navbar>.container-sm, .navbar>.container-md, .navbar>.container-lg, .navbar>.container-xl, .navbar>.container-xxl {
         flex-wrap: nowrap !important;
     }
-    nav.navbar .NavParts .list-group .list-group-item{
+
+    nav.navbar .NavParts .list-group .list-group-item {
         padding: 0 !important;
     }
+
     nav.navbar .navbar-brand {
-    width: 85px;
+        width: 85px;
     }
-    nav.navbar .NavParts .list-group .list-group-item a{
+
+    nav.navbar .NavParts .list-group .list-group-item a {
         margin-left: 5px !important;
         font-size: 16px;
     }
+
     .AboutTheStore .StoreDescription {
         font-size: 20px;
     }
@@ -1545,13 +1664,18 @@ Media
     .RestaurantName {
         font-size: 20px;
     }
+    .SubmitMessage{
+        width: 50%;
+    }
 }
 
 @media (max-width: 575px) {
     .navbar>.container, .navbar>.container-fluid, .navbar>.container-sm, .navbar>.container-md, .navbar>.container-lg, .navbar>.container-xl, .navbar>.container-xxl {
         flex-wrap: nowrap !important;
     }
-
+    .SubmitMessage{
+        width: 100%;
+    }
     footer.footer .SocialMediaIcons li.nav-item {
         width: 45px;
         height: 45px;
@@ -1607,9 +1731,6 @@ Media
         margin: 5px;
     }
 
-    .Categories .WhiteBG svg {
-        font-size: 45px;
-    }
 
     nav.navbar .NavParts .list-group .list-group-item {
         margin-left: 5px !important;
