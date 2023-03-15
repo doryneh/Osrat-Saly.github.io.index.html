@@ -9,292 +9,28 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="assets/css/bootstrap.rtl.css">
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
-    <title>Store</title>
+    <title>اسم المطعم</title>
 </head>
 
 <body>
 
-    <!--Navbar-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light d-flex pt-3">
-        <div class="container ">
 
+    <!--BreadCrumb-->
 
-            <a class="navbar-brand" href="index.html"><img src="./images/Logo.jpg" alt="Logo"></a>
-
-
-            <div class="NavParts">
-                <ul class="list-group list-group-horizontal">
-                    <li class="list-group-item me-4"><a href="Restaurants.html"> جميع الأقسام </a></li>
-                    <li class="list-group-item"><a href="Restaurants.html">العروض</a></li>
-                </ul>
-            </div>
-
-            <div class="navbar-nav  ">
-                <a class="nav-link btn" href="#searchBar">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </a>
-                <!--Notification-->
-                <a class="nav-link position-relative btn" data-bs-toggle="offcanvas" href="#offcanvasNotification"
-                    role="button" aria-controls="offcanvasNotification"><i class="fa-solid fa-bell"></i>
-                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                        3
-                        <span class="visually-hidden">unread messages</span>
-                    </span>
-                </a>
-
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNotification"
-                    aria-labelledby="offcanvasExampleLabel">
-                    <div class="offcanvas-header text-center">
-                        <h5 class="offcanvas-title mx-auto" id="offcanvasExampleLabel" style="width: 100%;">
-                            <b>الإشعارات </b>
-                        </h5>
-                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
-                            aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body " style="background-color: white;">
-                        <h6 class="priceRange text-center pb-3" style="border-bottom:2px solid black ; ">
-                            <b>العروض</b>
-                            <br>
-                        </h6>
-                        <div class="offers my-auto">
-                            <i class="fa-solid fa-gift"></i>
-                            <div>
-                                <p class="emptyNotification">
-                                    صندوق العروض فارغ
-                                </p>
-                                <p>
-                                    لا توجد عروض جديدة
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--Notification-->
-
-                <!--Cart-->
-                <a class="nav-link position-relative btn " data-bs-toggle="offcanvas" href="#offcanvasExample"
-                    role="button" aria-controls="offcanvasExample"><i class="fa-solid fa-cart-shopping"></i>
-                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                        1
-                        <span class="visually-hidden"> Number of Items in cart</span>
-                    </span>
-                </a>
-                <div class="offcanvas offcanvas-end  " tabindex="-1" id="offcanvasExample"
-                    aria-labelledby="offcanvasExampleLabel">
-                    <div class="offcanvas-header text-center">
-                        <h5 class="offcanvas-title mx-auto" id="offcanvasExampleLabel" style="width: 100%;">
-                            <b>سلة التسوق</b> <span class="float-start"><i class="fa-solid fa-share-nodes"></i></span>
-                        </h5>
-                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
-                            aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body cart-body position-relative">
-                        <p class="priceRange">
-                            هل ترغب بشحن مجاني؟ أضف 335.94 ريال إلى سلتك
-                            <br>
-                        <div class="progress" style="height: 1px;">
-                            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25"
-                                aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                        </p>
-
-                        <div class="card WhiteBG mb-3 CartItem" style="max-width: 540px;">
-                            <div class="row g-0">
-                                <div class="col-3 my-auto">
-                                    <img src="./images/product.png" class="img-fluid rounded-start" alt="...">
-                                </div>
-                                <div class="col-9">
-                                    <div class="card-body">
-                                        <p class="card-title">essence <button class="btn trash float-end"><i
-                                                    class="fa-solid fa-trash"></i></button>
-                                            <br>
-                                            <span class="card-title-span">
-                                                ماسكرا اي لوف اكستريم كريزي فوليوم من ايسنس
-
-                                            </span>
-
-                                        </p>
-                                        <div class="card WhiteBG CardPrice mb-1">
-                                            <div class="row g-0">
-                                                <div class="col-5 Price">
-                                                    <p class="before"><s> 120 ريال </s></p>
-                                                    <p class="after">90 ريال </p>
-
-                                                </div>
-                                                <div class="">
-                                                    <div class="card-body ">
-                                                        <div class="input-group">
-                                                            <span class="input-group-btn">
-                                                                <button type="button" class="btn btn-default btn-number"
-                                                                    data-type="minus" data-field="quant[1]">
-                                                                    <i class="fa-solid fa-minus"></i>
-                                                                </button>
-                                                            </span>
-                                                            <input type="text" name="quant[1]"
-                                                                class="form-control input-number" value="8" min="0"
-                                                                max="99">
-                                                            <span class="input-group-btn">
-                                                                <button type="button" class="btn btn-default btn-number"
-                                                                    data-type="plus" data-field="quant[1]">
-                                                                    <i class="fa-solid fa-plus"></i>
-                                                                </button>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card WhiteBG mb-3 CartItem" style="max-width: 540px;">
-                            <div class="row g-0">
-                                <div class="col-3 my-auto">
-                                    <img src="./images/product.png" class="img-fluid rounded-start" alt="...">
-                                </div>
-                                <div class="col-9">
-                                    <div class="card-body">
-                                        <p class="card-title">essence <button class="btn trash float-end"><i
-                                                    class="fa-solid fa-trash"></i></button>
-                                            <br>
-                                            <span class="card-title-span">
-                                                ماسكرا اي لوف اكستريم كريزي فوليوم من ايسنس
-
-                                            </span>
-                                        </p>
-                                        <div class="card WhiteBG CardPrice mb-1">
-                                            <div class="row g-0">
-                                                <div class="col-5 Price">
-                                                    <p class="before"><s> 120 ريال </s></p>
-                                                    <p class="after">90 ريال </p>
-
-                                                </div>
-                                                <div class="">
-                                                    <div class="card-body ">
-                                                        <div class="input-group">
-                                                            <span class="input-group-btn">
-                                                                <button type="button" class="btn btn-default btn-number"
-                                                                    data-type="minus" data-field="quant[1]">
-                                                                    <i class="fa-solid fa-minus"></i>
-                                                                </button>
-                                                            </span>
-                                                            <input type="text" name="quant[1]"
-                                                                class="form-control input-number" value="8" min="0"
-                                                                max="99">
-                                                            <span class="input-group-btn">
-                                                                <button type="button" class="btn btn-default btn-number"
-                                                                    data-type="plus" data-field="quant[1]">
-                                                                    <i class="fa-solid fa-plus"></i>
-                                                                </button>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class=" cart-btn bottom-btn position-absolute">
-                        <p>
-                            <b>الإجمالي : 2 منتجات - 18.60 ريال</b>
-                        </p>
-                        <button class="btn btn-dark p-3" type="button" data-bs-toggle="offcanvas"
-                            data-bs-target="#CompleteOrder" aria-controls="CompleteOrder">
-                            إتمام الطلب
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <!--End Cart-->
+    <nav style="--bs-breadcrumb-divider: '/';" aria-label="breadcrumb" class="mb-2 mt-5 px-3 breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">الرئيسية</a></li>
+                <li class="breadcrumb-item" aria-current="page"><a href="Restaurants.html">المطاعم </a> </li>
+                <li class="breadcrumb-item active" aria-current="page"><a href="Store.html">مطعم البيك </a> </li>
+            </ol>
         </div>
-        </div>
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="CompleteOrder" aria-labelledby="CompleteOrderLabel">
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="CompleteOrderLabel">أهلا بك</h5>
-                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
-                    aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body cart-body">
-                <form action="" method="post" class="completeOrder">
 
-
-                    <div class="form-group mb-5">
-                        <div class="input-group ">
-                            <input type="text" class="form-control" placeholder="الإسم الأول والأخير"
-                                aria-label="Username" aria-describedby="basic-addon1">
-                        </div>
-
-                        <div class="input-group ">
-                            <input type="radio" class="btn-check w-50" name="options-outlined" id="success-outlined"
-                                autocomplete="off" checked>
-                            <label class="btn btn-outline-dark" for="success-outlined">ذكر</label>
-
-                            <input type="radio" class="btn-check w-50" name="options-outlined" id="danger-outlined"
-                                autocomplete="off">
-                            <label class="btn btn-outline-dark" for="danger-outlined"> أنثى</label>
-                        </div>
-
-
-                        <div class="input-group ">
-
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected>حدد المحافظة</option>
-                                <option value="1">صنعاء</option>
-                                <option value="2">عدن</option>
-                            </select>
-                        </div>
-
-                        <div class="input-group ">
-                            <input type="number" class="form-control" aria-label="" placeholder="رقم الهاتف">
-                        </div>
-
-                        <div class="input-group ">
-                            <input type="text" class="form-control" placeholder="العنوان" aria-label="password">
-                        </div>
-
-                        <div class="input-group ">
-                            <input type="text" class="form-control" placeholder="أسم المستلم كامل"
-                                aria-label="password">
-                        </div>
-                        <div class="input-group ">
-                            <input type="number" class="form-control" aria-label=""
-                                placeholder=" رقم هاتف المستلم للطلب                         ">
-                        </div>
-
-                        <div class="input-group ">
-                            <input type="text" class="form-control"
-                                placeholder="عنوان المسلم للطلب بالتحديد                        " aria-label="password">
-                        </div>
-
-                        <div class="input-group">
-                            بتسجيلك، انت توافق على
-                            <a href="policy.html">
-                                الشروط والأحكام
-                            </a>
-                        </div>
-                    </div>
-                    <div class=" cart-btn">
-                        <button class="btn btn-dark p-3" type="button" data-bs-toggle="offcanvas"
-                            data-bs-target="#CompleteOrder" aria-controls="CompleteOrder">
-                            تسجيل جديد
-                        </button>
-
-
-                    </div>
-                </form>
-            </div>
-        </div>
     </nav>
-
-    <!--End Navbar-->
+    <!--End BreadCrumb-->
 
     <!--About The Store-->
-    <section class="AboutTheStore mt-5" id="AboutTheStore">
+    <section class="AboutTheStore mt-3" id="AboutTheStore">
         <div class="container">
             <div class="WhiteBG d-flex align-items-center justify-content-between p-4">
 
@@ -305,7 +41,7 @@
                     طازج من الفرن ,مباشرة الى مائدتك
                 </div>
                 <div class="StoreIcon">
-                    text text
+                    مطعم البيك
                 </div>
             </div>
         </div>

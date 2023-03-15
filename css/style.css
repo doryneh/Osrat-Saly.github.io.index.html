@@ -151,7 +151,10 @@ nav.navbar .navbar-nav a.nav-link .badge {
     display: flex;
     justify-content: center;
     align-items: center;
+
+
     font-size: 17px;
+
 }
 
 nav.navbar form {
@@ -339,6 +342,7 @@ nav.navbar .NavParts .list-group .list-group-item a {
     font-weight: bold;
     font-size: 18px;
     text-decoration: none;
+
 }
 
 nav.navbar .NavParts .list-group .list-group-item a:hover {
@@ -717,7 +721,7 @@ section.category .categoryProduct .card {
 End ProductCarouse
 *********************
 *********************/
-.WhiteBG ,.WhiteBG.NotRounded {
+.WhiteBG, .WhiteBG.NotRounded {
     background-color: white !important;
     border-radius: 25px !important;
     filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.12)) !important;
@@ -732,15 +736,15 @@ End ProductCarouse
     justify-content: center;
 }
 
-.WhiteBG:hover {
+.Restaurants .WhiteBG:hover {
     filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.247));
 }
 
-.WhiteBG:hover img, .WhiteBG:hover .RestaurantName {
+.Restaurants .WhiteBG:hover img, .Restaurants .WhiteBG:hover .RestaurantName {
     transform: scale(0.9);
 }
 
-.WhiteBG img {
+.Restaurants .WhiteBG img {
     width: 100%;
     border-radius: 50%;
     filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.12));
@@ -768,7 +772,7 @@ a {
     text-align: center;
 }
 
-.AboutTheStore .StoreDescription {
+.AboutTheStore .StoreDescription, .CartStoreName {
     font-size: 25px;
     color: #404e73;
     font-weight: bolder;
@@ -803,35 +807,42 @@ a {
     font-size: 50px;
     color: #404e73;
 }
-.AboutFood .card{
+
+.AboutFood .card {
     background-color: white;
     border: none;
     filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.116));
     border-radius: 25px;
     transition: 0.2s ease all;
 }
-.AboutFood .card:hover{
+
+.AboutFood .card:hover {
     transform: scale(1.05);
 }
-.AboutFood .card .card-body .card-title{
+
+.AboutFood .card .card-body .card-title {
     font-size: 25px;
     font-weight: bold;
     color: #404e73;
-  
+
 }
-.AboutFood .card .card-body .card-text{
+
+.AboutFood .card .card-body .card-text {
     font-size: 20px;
     font-weight: bold;
     color: #afafaf;
 }
-.AboutFood .card .card-body .card-text small{
+
+.AboutFood .card .card-body .card-text small {
     font-size: 20px !important;
     color: #f28888 !important;
-    
+
 }
-.AboutFood .WhiteBG:hover img{
+
+.AboutFood .WhiteBG:hover img {
     transform: none !important;
 }
+
 .AboutFood {
     display: none;
 }
@@ -881,7 +892,7 @@ section.productDescription .nav-tabs, section.productDescription .nav-tabs .nav-
 
 section.productDescription .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
 
-    border-bottom: 3px solid #f28888  !important;
+    border-bottom: 3px solid #f28888 !important;
 }
 
 section.productDescription .tab-content>.active {
@@ -942,12 +953,15 @@ section.productDetails .carousel .carousel-indicators button.share {
 section.productDetails .carousel .carousel-indicators button.active {
     border: 1px solid #404e73;
 }
-section.productDetails .WhiteBG .carousel  img{
+
+section.productDetails .WhiteBG .carousel img {
     border-radius: 25px !important;
 }
-section.productDetails .WhiteBG:hover img{
+
+section.productDetails .WhiteBG:hover img {
     transform: none !important;
 }
+
 section.productDetails .carousel .carousel-indicators button img {
     border-radius: 0px !important;
 }
@@ -993,11 +1007,6 @@ section.productDetails .deepDetails .card {
     border: none !important;
 }
 
-section.productDetails .deepDetails .card h5.original {
-    font-size: 13px;
-    color: rgb(0, 170, 0);
-    font-weight: bold;
-}
 
 section.productDetails .deepDetails .card .moreBrand {
     font-size: 13px;
@@ -1005,9 +1014,7 @@ section.productDetails .deepDetails .card .moreBrand {
     color: #111111;
 }
 
-section.productDetails .deepDetails .card .moreBrand span {
-    color: purple;
-}
+
 
 section.productDetails .deepDetails .card.CardPrice .Price p.before {
     font-size: 22px;
@@ -1023,9 +1030,11 @@ section.productDetails .deepDetails .card.CardPrice .card-body .Sale {
     text-align: center;
 
 }
+
 section.productDetails .deepDetails .ProductSize .form-check input {
     display: none;
 }
+
 section.productDetails .deepDetails .ProductSize .form-check label img {
     width: 70px;
     height: 70px;
@@ -1046,211 +1055,67 @@ End Product Details
 *********************
 *********************/
 
-
 /*********************
 *********************
-Filter Accordion
-*********************
-*********************/
-.category .filter {
-    height: fit-content;
-}
-
-.category .filter .accordion-flush .accordion-item .accordion-button {
-    font-size: 13px;
-    font-weight: bold;
-    box-shadow: none;
-    display: unset;
-}
-
-.category .filter .accordion-flush .accordion-item .accordion-button span {
-    font-size: 15px;
-    font-weight: bold;
-    background-image: url(../images/plus.png);
-    background-size: cover;
-    width: 8px;
-    height: 8px;
-    transition: 0.2s all ease;
-}
-
-.category .filter .accordion-button:not(.collapsed) {
-    color: unset;
-    background-color: unset;
-    box-shadow: none;
-}
-
-.category .filter .accordion-button:not(.collapsed) span {
-    background-image: url(../images/minus.png) !important;
-}
-
-
-.category .filter .accordion-button::after {
-    display: none;
-}
-
-.category .filter .form-control {
-    font-size: 12px;
-}
-
-.category .filter .form-check label.form-check-label {
-    font-size: 13px;
-}
-
-.category .filter .accordion-body {
-    margin-bottom: 20px;
-    padding-right: 15px !important;
-}
-
-.category .filter button.btn.d-md-none.d-inline-block {
-    box-shadow: none;
-}
-
-#filter1 li.list-group-item, #filter2 li.list-group-item, #filter2 .nav-pills .nav-link {
-    border: none;
-    font-size: 15px;
-    margin-bottom: 10px;
-    font-weight: 600;
-    text-align: right;
-    color: black;
-}
-
-#filter2 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-    background-color: transparent;
-    border: 2px solid #e2e2e2;
-    box-shadow: none;
-    border-left: 3px solid black;
-    color: black;
-    font-weight: bold;
-}
-
-
-#filter2 li.list-group-item {
-    padding: normal 0;
-}
-
-#filter1 li.list-group-item .form-check-input {
-    border-radius: 50%;
-
-}
-
-h5#filter1label, h5#filter2label {
-    font-weight: bold;
-}
-
-.offcanvas-header {
-    border-bottom: 2px solid #e2e2e2;
-}
-
-/*********************
-*********************
-End Filter Accordion 
+Cart
 *********************
 *********************/
 
-
-
-/*********************
-*********************
-categoryProduct 
-*********************
-*********************/
-.category .categoryProduct .form-select {
-    padding: 5px;
-    width: 250px;
-    font-size: 14px;
-    box-shadow: none;
+.CartImage {
+    width: 100px !important;
+    border-radius: 0px !important;
 }
 
-button.AddToCart.btn {
-    color: white;
-    background-color: #404e73;
-    text-align: center;
-    width: 100%;
-    line-height: 15px;
-    padding: 10px;
-    font-size: 15px;
-    font-weight: bold;
-    border-radius: 8px;
+.CartItems .CartLineTwo {
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+    padding: 20px 0px;
 }
 
-/*Pagination*/
-
-.category .categoryProduct nav ul.pagination li {
-
-    width: 36px;
-    height: 36px;
-    margin-left: 10px;
-}
-
-.category .categoryProduct nav ul.pagination li a {
-    border: none;
-    background-color: transparent;
-    color: black;
-    box-shadow: none;
-    text-align: center;
-
-}
-
-.category .categoryProduct nav ul.pagination li a.active {
-    background-color: #f28888;
-    border-radius: 50%;
-    color: white;
-}
-
-/*End Pagination*/
-
-.refundBody {
-    background-color: white !important;
-}
-
-.refundBody .categoryProduct p {
-    font-size: 13px;
-}
-
-/*********************
-*********************
-End categoryProduct 
-*********************
-*********************/
-
-/*********************
-*********************
-Brand 
-*********************
-*********************/
-.brandBody .breadcrumb .breadcrumb-item a, .brandBody .breadcrumb-item+.breadcrumb-item::before {
+.CartItems .CartText {
     font-size: 20px;
-    line-height: 50px;
-}
-
-.brandBody .breadcrumb {
-    align-content: center;
+    display: flex;
     justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
-.brandBody section.category .categoryProduct .card {
-    width: 23%;
-    box-shadow: 0px 5px 10px rgb(156, 156, 156);
-    transition: 0.5s ease all;
+.CartItems .CartRowItem {
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
 }
 
-.brandBody section.category .categoryProduct .card:hover {
-    width: 23%;
-    box-shadow: 0px 5px 10px rgb(0, 0, 0);
-}
-
-.brandBody section.category .categoryProduct .card .card-body .card-title {
+.CartItems .CartTotalText {
+    font-size: 25px;
+    color: black;
     font-weight: bold;
 }
 
-.brandBody section.category .categoryProduct .card:hover .card-body .card-title span {
-    font-weight: bolder;
+.CartItems .CartTotalText span {
     color: #f28888;
+    margin-right: 15px;
+}
+
+.TotalRow .col-12 {
+    direction: ltr;
+}
+
+.TotalRow .col-12 button {
+    border-radius: 8px;
+    background-color: #404e73;
+    font-size: 20px;
+    font-weight: 600;
+    width: 25%;
+    border: none;
+}
+
+.TotalRow .col-12 button:hover {
+    background-color: #242b3f;
 }
 
 /*********************
 *********************
-End Brand 
+End Cart
 *********************
 *********************/
 
@@ -1260,10 +1125,6 @@ Footer
 *********************
 *********************/
 
-footer.footer .whyUs, footer.footer .youNeedHelp {
-    background-color: #F9D9DC;
-    position: relative;
-}
 
 footer.footer .blueLine {
     background-color: #404e73;
@@ -1277,44 +1138,6 @@ footer.footer .blueLine {
     left: 50%;
     top: -5%;
     transform: translateX(-50%);
-}
-
-footer.footer .FooterCards {
-    width: 50%;
-}
-
-footer.footer .carousel-item {
-    padding: 10px;
-    background-color: transparent;
-}
-
-footer.footer .FooterCards .card {
-    border: none;
-    padding: 10px;
-    width: 50%;
-    background-color: transparent;
-}
-
-footer.footer .FooterCards .card img {
-    width: 100%;
-}
-
-footer.footer .FooterServices .card-group .card {
-    background-color: transparent;
-    border: none;
-}
-
-footer.footer .FooterServices .card-group .card a {
-    text-decoration: none;
-    color: #000000;
-}
-
-footer.footer .FooterServices .card-group .card img {
-    width: 50%;
-}
-
-footer.footer .FooterServices .card-group .card .card-body h6 {
-    font-weight: 800;
 }
 
 footer.footer .SocialMediaIcons {
@@ -1378,13 +1201,13 @@ Animation
     transition: 0.5s all ease;
 }
 
-footer.footer .SocialMediaIcons li.nav-item, .Categories .carousel-item .card {
+.Categories .carousel-item .card {
     position: relative;
     transform: scale(0) !important;
     transition: 0.5s all ease;
 }
 
-footer.footer .SocialMediaIcons li.nav-item.active, .Categories .carousel-item .card.active {
+.Categories .carousel-item .card.active {
     transform: scale(1) !important;
 }
 
@@ -1637,12 +1460,19 @@ Media
     footer.footer .blueLine {
         width: 60%;
         top: -2%;
-        padding: 10px 5px 0px 5px !important;
-
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     footer.footer .SocialMediaIcons li.nav-item {
         margin-left: 20px;
+        width: 60px;
+        height: 60px;
+    }
+
+    footer.footer .SocialMediaIcons li.nav-item a {
+        font-size: 27px;
     }
 
     .NoAnim {
@@ -1655,14 +1485,53 @@ Media
 
 
 }
-@media (max-width: 767px){
-    section.Categories .card img, .Categories .WhiteBG{
+
+@media (max-width: 767px) {
+    section.Categories .card img, .Categories .WhiteBG {
         width: 130px;
         height: 130px;
     }
-    .AboutTheStore  .WhiteBG{
+
+    .AboutTheStore .StoreDescription {
+        font-size: 20px;
+    }
+
+    nav.navbar .navbar-nav a.nav-link {
+        margin-left: 15px;
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+    }
+
+    .CartImage {
+        width: 75px;
+    }
+
+    .AboutTheStore .WhiteBG {
         flex-direction: column;
 
+    }
+
+    .CartItems .CartTotalText {
+        font-size: 20px;
+    }
+
+    .TotalRow .col-12 button {
+        width: 50%;
+        font-size: 18px;
+    }
+
+    section.Categories .card:hover .card-body {
+        width: 120px;
+        height: 120px;
+    }
+
+    nav.breadcrumb li a, .breadcrumb-item+.breadcrumb-item::before {
+        font-size: 20px;
+    }
+
+    .RestaurantName {
+        font-size: 20px;
     }
 }
 
@@ -1671,12 +1540,67 @@ Media
         flex-wrap: nowrap !important;
     }
 
+    footer.footer .SocialMediaIcons li.nav-item {
+        width: 45px;
+        height: 45px;
+    }
+
+    footer.footer .SocialMediaIcons li.nav-item a {
+        font-size: 20px;
+    }
+
+    .CartStoreName {
+        font-size: 20px;
+    }
+
+    .CartItems .CartTotalText {
+        font-size: 18px;
+    }
+
+    .TotalRow .col-12 button {
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .CartItems .CartLineOne img {
+        width: 50% !important;
+    }
+
+    .CartItems .CartText {
+        font-size: 15px;
+    }
+
+    section.searchBar .row input {
+        height: 40px;
+    }
+
+    section.searchBar .row button {
+        font-size: 20px;
+    }
+
+    nav.breadcrumb li a, .breadcrumb-item+.breadcrumb-item::before {
+        font-size: 13px;
+    }
+
+    section.Categories .card .card-body .card-title {
+        font-size: 18px;
+    }
+
+    .list-group-horizontal {
+        flex-direction: column !important;
+    }
+
+    nav.navbar .navbar-brand {
+        width: 75px;
+        margin: 5px;
+    }
+
     .Categories .WhiteBG svg {
         font-size: 45px;
     }
 
     nav.navbar .NavParts .list-group .list-group-item {
-        margin-left: 15px;
+        margin-left: 5px !important;
         padding: 0;
     }
 
@@ -1685,13 +1609,16 @@ Media
     }
 
     nav.navbar .navbar-nav a.nav-link, nav.navbar .dropdown button, nav.navbar button.SideBar {
-        width: 40px;
-        height: 40px;
+        width: 35px;
+        height: 35px;
         font-size: 15px;
     }
 
     nav.navbar .navbar-nav a.nav-link .badge {
         font-size: 10px;
+        width: 15px;
+        height: 15px;
+        padding: 0px;
     }
 
     section.searchBar {
@@ -1703,12 +1630,10 @@ Media
     }
 
     nav.navbar .NavParts .list-group .list-group-item a {
-        font-size: 14px;
-
+        font-size: 12px;
+        border-bottom: 1px solid white;
     }
 
-    .hiddenSearch {
-        transition: 1s ease all !important;
-    }
+
 
 }

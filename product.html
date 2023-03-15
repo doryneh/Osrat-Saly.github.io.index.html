@@ -12,288 +12,26 @@
 </head>
 
 <body class="productBody">
-  <!--Navbar-->
- <nav class="navbar navbar-expand-lg navbar-light bg-light d-flex pt-3">
-    <div class="container ">
 
+    <!--BreadCrumb-->
 
-        <a class="navbar-brand" href="index.html"><img src="./images/Logo.jpg" alt="Logo"></a>
+    <nav style="--bs-breadcrumb-divider: '/';" aria-label="breadcrumb" class="mb-2 mt-5 px-3 breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">الرئيسية</a></li>
+                <li class="breadcrumb-item" aria-current="page"><a href="Restaurants.html">المطاعم </a> </li>
+                <li class="breadcrumb-item" aria-current="page"><a href="Store.html">مطعم البيك </a> </li>
+                <li class="breadcrumb-item active" aria-current="page"><a href="product.html">وجبة سوسو باللحم </a>
+                </li>
 
-  
-        <div class="NavParts">
-            <ul class="list-group list-group-horizontal">
-                <li class="list-group-item me-4"><a href="Restaurants.html"> جميع الأقسام </a></li>
-                <li class="list-group-item"><a href="Restaurants.html">العروض</a></li>
-            </ul>
+            </ol>
         </div>
 
-        <div class="navbar-nav  ">
-            <a class="nav-link btn" href="#searchBar">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </a>
-            <!--Notification-->
-            <a class="nav-link position-relative btn" data-bs-toggle="offcanvas" href="#offcanvasNotification"
-                role="button" aria-controls="offcanvasNotification"><i class="fa-solid fa-bell"></i>
-                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                    3
-                    <span class="visually-hidden">unread messages</span>
-                </span>
-            </a>
-
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNotification"
-                aria-labelledby="offcanvasExampleLabel">
-                <div class="offcanvas-header text-center">
-                    <h5 class="offcanvas-title mx-auto" id="offcanvasExampleLabel" style="width: 100%;">
-                        <b>الإشعارات </b>
-                    </h5>
-                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
-                        aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body " style="background-color: white;">
-                    <h6 class="priceRange text-center pb-3" style="border-bottom:2px solid black ; ">
-                        <b>العروض</b>
-                        <br>
-                    </h6>
-                    <div class="offers my-auto">
-                        <i class="fa-solid fa-gift"></i>
-                        <div>
-                            <p class="emptyNotification">
-                                صندوق العروض فارغ
-                            </p>
-                            <p>
-                                لا توجد عروض جديدة
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--Notification-->
-
-            <!--Cart-->
-            <a class="nav-link position-relative btn " data-bs-toggle="offcanvas" href="#offcanvasExample"
-                role="button" aria-controls="offcanvasExample"><i class="fa-solid fa-cart-shopping"></i>
-                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                    1
-                    <span class="visually-hidden"> Number of Items in cart</span>
-                </span>
-            </a>
-            <div class="offcanvas offcanvas-end  " tabindex="-1" id="offcanvasExample"
-                aria-labelledby="offcanvasExampleLabel">
-                <div class="offcanvas-header text-center">
-                    <h5 class="offcanvas-title mx-auto" id="offcanvasExampleLabel" style="width: 100%;">
-                        <b>سلة التسوق</b> <span class="float-start"><i class="fa-solid fa-share-nodes"></i></span>
-                    </h5>
-                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
-                        aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body cart-body position-relative">
-                    <p class="priceRange">
-                        هل ترغب بشحن مجاني؟ أضف 335.94 ريال إلى سلتك
-                        <br>
-                    <div class="progress" style="height: 1px;">
-                        <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25"
-                            aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    </p>
-
-                    <div class="card mb-3 CartItem" style="max-width: 540px;">
-                        <div class="row g-0">
-                            <div class="col-3 my-auto">
-                                <img src="./images/product.png" class="img-fluid rounded-start"
-                                    alt="...">
-                            </div>
-                            <div class="col-9">
-                                <div class="card-body">
-                                    <p class="card-title">essence <button class="btn trash float-end"><i
-                                                class="fa-solid fa-trash"></i></button>
-                                        <br>
-                                        <span class="card-title-span">
-                                            ماسكرا اي لوف اكستريم كريزي فوليوم من ايسنس
-
-                                        </span>
-
-                                    </p>
-                                    <div class="card CardPrice mb-1">
-                                        <div class="row g-0">
-                                            <div class="col-5 Price">
-                                                <p class="before"><s> 120 ريال </s></p>
-                                                <p class="after">90 ريال </p>
-
-                                            </div>
-                                            <div class="">
-                                                <div class="card-body ">
-                                                    <div class="input-group">
-                                                        <span class="input-group-btn">
-                                                            <button type="button" class="btn btn-default btn-number"
-                                                                data-type="minus" data-field="quant[1]">
-                                                                <i class="fa-solid fa-minus"></i>
-                                                            </button>
-                                                        </span>
-                                                        <input type="text" name="quant[1]"
-                                                            class="form-control input-number" value="8" min="0"
-                                                            max="99">
-                                                        <span class="input-group-btn">
-                                                            <button type="button" class="btn btn-default btn-number"
-                                                                data-type="plus" data-field="quant[1]">
-                                                                <i class="fa-solid fa-plus"></i>
-                                                            </button>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card mb-3 CartItem" style="max-width: 540px;">
-                        <div class="row g-0">
-                            <div class="col-3 my-auto">
-                                <img src="./images/product.png" class="img-fluid rounded-start"
-                                    alt="...">
-                            </div>
-                            <div class="col-9">
-                                <div class="card-body">
-                                    <p class="card-title">essence <button class="btn trash float-end"><i
-                                                class="fa-solid fa-trash"></i></button>
-                                        <br>
-                                        <span class="card-title-span">
-                                            ماسكرا اي لوف اكستريم كريزي فوليوم من ايسنس
-
-                                        </span>
-                                    </p>
-                                    <div class="card CardPrice mb-1">
-                                        <div class="row g-0">
-                                            <div class="col-5 Price">
-                                                <p class="before"><s> 120 ريال </s></p>
-                                                <p class="after">90 ريال </p>
-
-                                            </div>
-                                            <div class="">
-                                                <div class="card-body ">
-                                                    <div class="input-group">
-                                                        <span class="input-group-btn">
-                                                            <button type="button" class="btn btn-default btn-number"
-                                                                data-type="minus" data-field="quant[1]">
-                                                                <i class="fa-solid fa-minus"></i>
-                                                            </button>
-                                                        </span>
-                                                        <input type="text" name="quant[1]"
-                                                            class="form-control input-number" value="8" min="0"
-                                                            max="99">
-                                                        <span class="input-group-btn">
-                                                            <button type="button" class="btn btn-default btn-number"
-                                                                data-type="plus" data-field="quant[1]">
-                                                                <i class="fa-solid fa-plus"></i>
-                                                            </button>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class=" cart-btn bottom-btn position-absolute">
-                    <p>
-                        <b>الإجمالي : 2 منتجات - 18.60 ريال</b>
-                    </p>
-                    <button class="btn btn-dark p-3" type="button" data-bs-toggle="offcanvas"
-                        data-bs-target="#CompleteOrder" aria-controls="CompleteOrder">
-                        إتمام الطلب
-                    </button>
-                </div>
-            </div>
-        </div>
-        <!--End Cart-->
-    </div>
-    </div>
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="CompleteOrder" aria-labelledby="CompleteOrderLabel">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="CompleteOrderLabel">أهلا بك</h5>
-            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
-                aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body cart-body">
-            <form action="" method="post" class="completeOrder">
-
-
-                <div class="form-group mb-5">
-                    <div class="input-group ">
-                        <input type="text" class="form-control" placeholder="الإسم الأول والأخير"
-                            aria-label="Username" aria-describedby="basic-addon1">
-                    </div>
-
-                    <div class="input-group ">
-                        <input type="radio" class="btn-check w-50" name="options-outlined" id="success-outlined"
-                            autocomplete="off" checked>
-                        <label class="btn btn-outline-dark" for="success-outlined">ذكر</label>
-
-                        <input type="radio" class="btn-check w-50" name="options-outlined" id="danger-outlined"
-                            autocomplete="off">
-                        <label class="btn btn-outline-dark" for="danger-outlined"> أنثى</label>
-                    </div>
-
-
-                    <div class="input-group ">
-
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected>حدد المحافظة</option>
-                            <option value="1">صنعاء</option>
-                            <option value="2">عدن</option>
-                        </select>
-                    </div>
-
-                    <div class="input-group ">
-                        <input type="number" class="form-control" aria-label="" placeholder="رقم الهاتف">
-                    </div>
-
-                    <div class="input-group ">
-                        <input type="text" class="form-control" placeholder="العنوان" aria-label="password">
-                    </div>
-
-                    <div class="input-group ">
-                        <input type="text" class="form-control" placeholder="أسم المستلم كامل"
-                            aria-label="password">
-                    </div>
-                    <div class="input-group ">
-                        <input type="number" class="form-control" aria-label=""
-                            placeholder=" رقم هاتف المستلم للطلب                         ">
-                    </div>
-
-                    <div class="input-group ">
-                        <input type="text" class="form-control"
-                            placeholder="عنوان المسلم للطلب بالتحديد                        " aria-label="password">
-                    </div>
-
-                    <div class="input-group">
-                        بتسجيلك، انت توافق على
-                        <a href="policy.html">
-                            الشروط والأحكام
-                        </a>
-                    </div>
-                </div>
-                <div class=" cart-btn">
-                    <button class="btn btn-dark p-3" type="button" data-bs-toggle="offcanvas"
-                        data-bs-target="#CompleteOrder" aria-controls="CompleteOrder">
-                        تسجيل جديد
-                    </button>
-
-
-                </div>
-            </form>
-        </div>
-    </div>
-</nav>
-<!--End Navbar-->
+    </nav>
+    <!--End BreadCrumb-->
 
     <!--About The Store-->
-    <section class="AboutTheStore mt-5" id="AboutTheStore">
+    <section class="AboutTheStore mt-md-5 mt-3" id="AboutTheStore">
         <div class="container">
             <div class="WhiteBG d-flex align-items-center justify-content-between p-4">
 
@@ -312,155 +50,150 @@
     <!--ENd About The store-->
 
 
-
-
-
-
-
-
     <!--Product Details-->
-
     <section class="productDetails mt-5">
         <div class="container">
             <div class="row">
                 <div class="col-md-7 col-12  ">
                     <div class="WhiteBG p-3">
-                    <div class="row ">
-                        <div id="carouselExampleIndicators" class="carousel slide d-flex" data-bs-ride="carousel">
-                            <div class="carousel-indicators">
-                                <div class="col-4">
-                                    <button type="button" data-bs-target="#carouselExampleIndicators"
-                                        data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1">
-                                        <img src="images/AlBeikFood1.jpg " class="d-block w-100"
-                                            alt="...">
-                                    </button>
-                                    <button type="button" data-bs-target="#carouselExampleIndicators"
-                                        data-bs-slide-to="1" aria-label="Slide 2"> <img
-                                            src="images/AlBeikFood2.jpg" class="d-block w-100" alt="...">
-                                    </button>
-                                    <button type="button" data-bs-target="#carouselExampleIndicators"
-                                        data-bs-slide-to="2" aria-label="Slide 3"> <img
-                                            src="images/AlBeikFood3.jpg" class="d-block w-100" alt="...">
-                                    </button>
-                                    <button type="button" data-bs-target="#carouselExampleIndicators"
-                                        data-bs-slide-to="3" aria-label="Slide 4"> <img
-                                            src="images/AlBeikFood4.jpg" class="d-block w-100" alt="...">
-                                    </button>
-                                    <button type="button" class="like">
-                                        <i class="fa-regular fa-heart"></i>
-                                    </button>
-                                    <button type="button" class="share">
-                                        <i class="fa-solid fa-share-nodes"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="col-md-8 col-10">
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <img src="images/AlBeikFood1.jpg" class="d-block w-100"
-                                            alt="...">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="images/AlBeikFood2.jpg" class="d-block w-100" alt="...">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="images/AlBeikFood3.jpg" class="d-block w-100" alt="...">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="images/AlBeikFood4.jpg" class="d-block w-100" alt="...">
+                        <div class="row ">
+                            <div id="carouselExampleIndicators" class="carousel slide d-flex" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                    <div class="col-4">
+                                        <button type="button" data-bs-target="#carouselExampleIndicators"
+                                            data-bs-slide-to="0" class="active" aria-current="true"
+                                            aria-label="Slide 1">
+                                            <img src="images/AlBeikFood1.jpg " class="d-block w-100" alt="...">
+                                        </button>
+                                        <button type="button" data-bs-target="#carouselExampleIndicators"
+                                            data-bs-slide-to="1" aria-label="Slide 2"> <img src="images/AlBeikFood2.jpg"
+                                                class="d-block w-100" alt="...">
+                                        </button>
+                                        <button type="button" data-bs-target="#carouselExampleIndicators"
+                                            data-bs-slide-to="2" aria-label="Slide 3"> <img src="images/AlBeikFood3.jpg"
+                                                class="d-block w-100" alt="...">
+                                        </button>
+                                        <button type="button" data-bs-target="#carouselExampleIndicators"
+                                            data-bs-slide-to="3" aria-label="Slide 4"> <img src="images/AlBeikFood4.jpg"
+                                                class="d-block w-100" alt="...">
+                                        </button>
+                                        <button type="button" class="like">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </button>
+                                        <button type="button" class="share">
+                                            <i class="fa-solid fa-share-nodes"></i>
+                                        </button>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-4 col-0">
-                        </div>
-                        <div class="col-md-8 col-12">
-                            <div class="row">
-                                <div class="col-4 ProductDescriptionBtn">
-                                    <div class="center">
-                                        <p>
-                                        </p>
-                                        <div class="input-group">
-                                            <span class="input-group-btn">
-                                                <button type="button" class="btn btn-default btn-number"
-                                                    data-type="minus" data-field="quant[1]">
-                                                    <i class="fa-solid fa-minus"></i>
-                                                </button>
-                                            </span>
-                                            <input type="text" name="quant[1]" class="form-control input-number"
-                                                value="1" min="0" max="1">
-                                            <span class="input-group-btn">
-                                                <button type="button" class="btn btn-default btn-number"
-                                                    data-type="plus" data-field="quant[1]">
-                                                    <i class="fa-solid fa-plus"></i>
-                                                </button>
-                                            </span>
+                                <div class="col-md-8 col-10">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src="images/AlBeikFood1.jpg" class="d-block w-100" alt="...">
                                         </div>
-                                        <p>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <button type="button" class="btn addToCart">أضف الى السلّة</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                </div>
-                <div class="col-md-5  col-12 ">
-                <div class="WhiteBG p-3 deepDetails d-flex flex-column justify-content-between">
-                    <div class="row mb-md-4 mb-2">
-                        <div class="col-12">
-                            <h5 style="color:#404e73;">
-                                <b>بروستد دجاج البيك 6 قطع </b>
-                            </h5>
-                        </div>
-                    </div>
-                
-                    <div class="row  mb-md-4 mb-2">
-                        <div class="card CardPrice mb-3 mt-5">
-                            <div class="row g-0">
-                                <div class="col-5 Price">
-                                    <p class="before"><s> 120 ريال </s></p>
-                                    <p class="after">90 ريال </p>
-
-                                </div>
-                                <div class="col-6">
-                                    <div class="card-body h-100">
-                                        <p class="card-text Sale h-100 d-flex flex-column mb-0 justify-content-center">- 40%</p>
+                                        <div class="carousel-item">
+                                            <img src="images/AlBeikFood2.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="images/AlBeikFood3.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="images/AlBeikFood4.jpg" class="d-block w-100" alt="...">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row text-center ProductSize">
-                        <h6><b>تحديد الخيارات:</b>  </h6>
-                        <br>
-                        <div class="col-12 mt-3">
-                            <div class="form-check form-check-inline">
-                                <label for="inlineCheckbox1" class="active"><img src="images/Fries.png" alt="Combo"></label>
-
-                                <input class="form-check-input" type="radio" id="inlineCheckbox1"
-                                    name="inlineRadioOptions" checked>
+                        <div class="row">
+                            <div class="col-md-4 col-0">
                             </div>
-                            <div class="form-check form-check-inline">
-                                <label for="inlineCheckbox2"><img src="images/Pepsi.png" alt="Combo"></label>
-
-                                <input class="form-check-input" type="radio" id="inlineCheckbox2"
-                                    name="inlineRadioOptions">
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <label for="inlineCheckbox3"><img src="images/Combo.png" alt="Combo"></label>
-                                <input class="form-check-input" type="radio" id="inlineCheckbox3"
-                                    name="inlineRadioOptions">
+                            <div class="col-md-8 col-12">
+                                <div class="row">
+                                    <div class="col-4 ProductDescriptionBtn">
+                                        <div class="center">
+                                            <p>
+                                            </p>
+                                            <div class="input-group">
+                                                <span class="input-group-btn">
+                                                    <button type="button" class="btn btn-default btn-number"
+                                                        data-type="minus" data-field="quant[1]">
+                                                        <i class="fa-solid fa-minus"></i>
+                                                    </button>
+                                                </span>
+                                                <input type="text" name="quant[1]" class="form-control input-number"
+                                                    value="1" min="0" max="1">
+                                                <span class="input-group-btn">
+                                                    <button type="button" class="btn btn-default btn-number"
+                                                        data-type="plus" data-field="quant[1]">
+                                                        <i class="fa-solid fa-plus"></i>
+                                                    </button>
+                                                </span>
+                                            </div>
+                                            <p>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <button type="button" class="btn addToCart">أضف الى السلّة</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                   
+                <div class="col-md-5  col-12 mt-3 mt-md-0">
+                    <div class="WhiteBG p-3 deepDetails d-flex flex-column justify-content-between">
+                        <div class="row mb-md-4 mb-2">
+                            <div class="col-12">
+                                <h5 style="color:#404e73;">
+                                    <b>بروستد دجاج البيك 6 قطع </b>
+                                </h5>
+                            </div>
+                        </div>
+
+                        <div class="row  mb-md-4 mb-2">
+                            <div class="card CardPrice mb-3 mt-5">
+                                <div class="row g-0">
+                                    <div class="col-5 Price">
+                                        <p class="before"><s> 120 ريال </s></p>
+                                        <p class="after">90 ريال </p>
+
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="card-body h-100">
+                                            <p
+                                                class="card-text Sale h-100 d-flex flex-column mb-0 justify-content-center">
+                                                - 40%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row text-center ProductSize">
+                            <h6><b>تحديد الخيارات:</b> </h6>
+                            <br>
+                            <div class="col-12 mt-3">
+                                <div class="form-check form-check-inline">
+                                    <label for="inlineCheckbox1" class="active"><img src="images/Fries.png"
+                                            alt="Combo"></label>
+
+                                    <input class="form-check-input" type="radio" id="inlineCheckbox1"
+                                        name="inlineRadioOptions" checked>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <label for="inlineCheckbox2"><img src="images/Pepsi.png" alt="Combo"></label>
+
+                                    <input class="form-check-input" type="radio" id="inlineCheckbox2"
+                                        name="inlineRadioOptions">
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <label for="inlineCheckbox3"><img src="images/Combo.png" alt="Combo"></label>
+                                    <input class="form-check-input" type="radio" id="inlineCheckbox3"
+                                        name="inlineRadioOptions">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -496,7 +229,7 @@
                         <br>
                         هذه الماسكرا ستمنحك مظهر عيون جميلة برموش رائعة وخالية من العيوب.
                     </div>
-                 
+
                 </div>
             </div>
         </div>
@@ -504,7 +237,7 @@
     <!--End end-->
 
 
-    
+
 
     <div class="PinkSeperator mb-3 mt-4">
         <div class="container">
@@ -523,7 +256,7 @@
             <div class="row my-5 justify-content-between">
                 <div class="col-lg-2 col-sm-4 col-6">
                     <div class="WhiteBG p-4">
-                        <a href="">
+                        <a href="Store.html">
                             <img src="images/Al Beik.jpg" alt="Al Beik">
                             <div class="RestaurantName">
                                 البيك
@@ -533,7 +266,7 @@
                 </div>
                 <div class="col-lg-2 col-sm-4  col-6">
                     <div class="WhiteBG p-4">
-                        <a href="">
+                        <a href="Store.html">
                             <img src="images/AlTazaj.png" alt="AlTazaj">
                             <div class="RestaurantName">
                                 الطازج
@@ -543,7 +276,7 @@
                 </div>
                 <div class="col-lg-2 col-sm-4  mt-3 mt-sm-0 col-6">
                     <div class="WhiteBG p-4">
-                        <a href="">
+                        <a href="Store.html">
                             <img src="images/FiveGuysLogo.webp" alt="FiveGuysLogo">
                             <div class="RestaurantName">
                                 فايف غايز
@@ -553,7 +286,7 @@
                 </div>
                 <div class="col-lg-2 col-sm-4 mt-3 mt-lg-0 col-6">
                     <div class="WhiteBG p-4">
-                        <a href="">
+                        <a href="Store.html">
                             <img src="images/BK.jpg" alt="BK">
                             <div class="RestaurantName">
                                 برغر كينج
@@ -563,7 +296,7 @@
                 </div>
                 <div class="col-lg-2 col-sm-4  mt-3 mt-lg-0 col-6">
                     <div class="WhiteBG p-4">
-                        <a href="">
+                        <a href="Store.html">
                             <img src="images/McDonalds-logo.png" alt="McDonalds">
                             <div class="RestaurantName">
                                 ماكدونالز
@@ -573,7 +306,7 @@
                 </div>
                 <div class="col-lg-2 col-sm-4  mt-3 mt-lg-0 col-6">
                     <div class="WhiteBG p-4">
-                        <a href="">
+                        <a href="Store.html">
                             <img src="images/McDonalds-logo.png" alt="McDonalds">
                             <div class="RestaurantName">
                                 ماكدونالز
