@@ -1491,7 +1491,19 @@ Media
         width: 130px;
         height: 130px;
     }
-
+    .navbar > .container, .navbar > .container-fluid, .navbar > .container-sm, .navbar > .container-md, .navbar > .container-lg, .navbar > .container-xl, .navbar > .container-xxl{
+        flex-wrap: nowrap !important;
+    }
+    nav.navbar .NavParts .list-group .list-group-item{
+        padding: 0 !important;
+    }
+    nav.navbar .navbar-brand {
+    width: 85px;
+    }
+    nav.navbar .NavParts .list-group .list-group-item a{
+        margin-left: 5px !important;
+        font-size: 16px;
+    }
     .AboutTheStore .StoreDescription {
         font-size: 20px;
     }
